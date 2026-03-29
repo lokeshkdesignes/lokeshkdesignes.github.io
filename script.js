@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const introCursorBlink = document.getElementById('intro-cursor-blink');
   const navbar = document.getElementById('navbar');
 
+  const scrollIndicator = document.getElementById('scroll-indicator');
+
   let introEnded = false;
   function endIntro() {
     if (introEnded) return;
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.add('hidden');
     navbar.classList.add('visible');
     document.body.style.overflow = '';
+    scrollIndicator.classList.add('visible');
   }
 
   document.body.style.overflow = 'hidden';
@@ -84,13 +87,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === overlay) endIntro();
   });
 
+  /* ═══ SCROLL INDICATOR ═══ */
+  scrollIndicator.addEventListener('click', () => {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  });
+
   /* ═══ SCROLL PROGRESS ═══ */
   const scrollBar = document.getElementById('scroll-progress');
   window.addEventListener('scroll', () => {
     const h = document.documentElement.scrollHeight - window.innerHeight;
     const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
     scrollBar.style.height = pct + '%';
-  });
+
+    // Auto-hide scroll indicator
+    if (window.scrollY > 80) {
+      scrollIndicator.classList.add('hidden');
+    } else {
+      scrollIndicator.classList.remove('hidden');
+    }
+  }, { passive: true });
 
   /* ═══ SCROLL REVEAL ═══ */
   const reveals = document.querySelectorAll('.reveal');
