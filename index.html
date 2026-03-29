@@ -1,579 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Lokesh K — Graphic Designer & DI Colorist. Cinematic portfolio showcasing poster designs, color grading, logos, illustrations, and more." />
-  <title>Lokesh K — Graphic Designer & DI Colorist</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokesh K — Graphic Designer | Publicity Designer | Key Visual Artist</title>
+  <meta name="description" content="Portfolio of Lokesh K — Graphic Designer specializing in cinematic posters, key visuals, and brand identity design.">
+  <link rel="stylesheet" href="style.css">
+  <!-- EmailJS SDK (uncomment and add your public key) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
 </head>
+<body>
 
-<body class="is-loading">
+<!-- Custom Cursor -->
+<div id="cursor-main">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="#fff" stroke="none"/>
+  </svg>
+</div>
 
-  <!-- ════════════════════════════════
-       INTRO SCREEN (cinematic loader)
-  ════════════════════════════════ -->
-  <div id="intro-screen" aria-hidden="true">
-    <div class="intro-bg" id="intro-bg">
-      <img src="cinematic poster 1.png" alt="" />
-      <img src="cinematic poster 2.jpg" alt="" />
-      <img src="cinematic poster 3.jpg" alt="" />
-      <img src="cinematic poster 4.jpg" alt="" />
-      <img src="cinematic poster 5.png" alt="" />
-      <img src="DI 1.png" alt="" />
-      <img src="illustations 2.png" alt="" />
-      <img src="COMERICIAL 1.png" alt="" />
-      <img src="typograhy 2.jpg" alt="" />
-      <img src="logo 2.png" alt="" />
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- ═══ INTRO OVERLAY ═══ -->
+<div id="intro-overlay">
+  <div id="intro-cursor-blink"></div>
+  <div id="intro-name"><span id="intro-typed"></span><span id="intro-caret">|</span></div>
+  <div id="intro-role">GRAPHIC DESIGNER</div>
+  <img id="intro-sig" src="Lokesh K Signature.png" alt="Signature">
+  <button id="skip-intro">SKIP</button>
+</div>
+
+<!-- ═══ NAVBAR / TOOLBAR ═══ -->
+<nav id="navbar">
+  <span class="nav-brand">LOKESH K</span>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" class="section section-dark">
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-content reveal">
+    <h1>LOKESH K</h1>
+    <p class="hero-subtitle">Graphic Designer · Publicity Designer · Key Visual Artist</p>
+    <img class="hero-signature" src="Lokesh K Signature.png" alt="Lokesh K Signature">
+    <a href="#work" class="hero-cta">VIEW MY WORK</a>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" class="section section-light">
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <h2 class="section-title" style="color:var(--charcoal)">ABOUT</h2>
+      <p>I'm Lokesh K, a Graphic Designer who turned a passion for creativity into a career. Coming from a Computer Science background, I found my true calling in the world of visual design — crafting cinematic posters, bold key visuals, and meaningful brand identities. I believe great design is not just seen — it's felt.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Photoshop</span>
+        <span class="skill-tag">Illustrator</span>
+        <span class="skill-tag">Poster Design</span>
+        <span class="skill-tag">Key Visual</span>
+        <span class="skill-tag">Typography</span>
+        <span class="skill-tag">Brand Identity</span>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number" data-target="4">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="40">0</div>
+          <div class="stat-label">Clients</div>
+        </div>
+      </div>
     </div>
-    <div class="intro-veil"></div>
-    <div class="intro-content">
-      <h1 class="intro-name">Lokesh<span>&nbsp;K</span></h1>
-      <div class="intro-line"></div>
-      <p class="intro-title">Graphic Designer &amp; DI Colorist</p>
+    <div class="about-photo-wrap">
+      <img class="about-photo" src="Lokesh K profile Picture.jpg" alt="Lokesh K" loading="lazy">
     </div>
   </div>
+</section>
 
-  <!-- ════════════════════════════════
-       NAVBAR
-  ════════════════════════════════ -->
-  <nav id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-logo">Lokesh<span>.</span>K</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#categories">Work</a></li>
-      <li><a href="#posters">Posters</a></li>
-      <li><a href="#di">DI / Color</a></li>
-      <li><a href="#logos">Logos</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- ════════════════════════════════
-       HERO
-  ════════════════════════════════ -->
-  <section id="hero" aria-label="Hero">
-
-    <!-- Cinematic poster mosaic background -->
-    <div class="hero-bg" aria-hidden="true">
-      <img class="poster" src="cinematic poster 1.png" alt="" loading="eager" />
-      <img class="poster" src="cinematic poster 2.jpg" alt="" loading="eager" />
-      <img class="poster" src="cinematic poster 3.jpg" alt="" loading="eager" />
-      <img class="poster" src="cinematic poster 4.jpg" alt="" loading="eager" />
-      <img class="poster" src="cinematic poster 5.png" alt="" loading="eager" />
-      <img class="poster" src="illustations 1.png" alt="" loading="eager" />
-      <img class="poster" src="COMERICIAL 1.png" alt="" loading="eager" />
-      <img class="poster" src="DI 1.png" alt="" loading="eager" />
-      <img class="poster" src="typograhy 1.jpg" alt="" loading="eager" />
-      <img class="poster" src="logo 2.png" alt="" loading="eager" />
-    </div>
-
-    <div class="hero-overlay" aria-hidden="true"></div>
-
-    <div class="hero-content">
-      <h1 class="hero-name">Lokesh<span>&nbsp;K</span></h1>
-      <div class="hero-divider"></div>
-      <p class="hero-title">Graphic Designer &amp; DI Colorist</p>
-    </div>
-
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <div class="mouse"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════
-       ABOUT
-  ════════════════════════════════ -->
-  <section id="about" aria-label="About Lokesh K">
-    <div class="about-image-wrap reveal">
-      <img class="about-img" src="Lokesh K profile Picture.jpg" alt="Lokesh K — Graphic Designer & DI Colorist" />
-      <div class="about-signature-wrap">
-        <img class="about-signature-img" src="Lokesh K Signature.png" alt="Lokesh K Signature" loading="lazy" />
-      </div>
-    </div>
-
-    <div class="about-text">
-      <div class="reveal">
-        <p class="section-label">About</p>
-        <h2 class="section-title">The Eye Behind<br />the Frame</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="reveal reveal-delay-1">
-        <span class="role-badge">Graphic Designer &amp; DI Colorist</span>
-      </div>
-
-      <div class="reveal reveal-delay-2">
-        <p>
-          I'm a Graphic Designer and DI Colorist who truly enjoys bringing stories
-          to life through visuals. Whether it's designing a poster or adjusting
-          colors in a film, I love turning ideas into something people can see and feel.
-        </p>
-        <p>
-          I'm passionate about creativity, and I always aim to make my work
-          meaningful, not just good-looking. With experience in both design and
-          post-production, I've learned how to blend technical skills with a creative
-          eye to make visuals that connect with people.
-        </p>
-      </div>
-
-      <div class="about-stats reveal reveal-delay-3">
-        <div class="stat-item">
-          <div class="num"><span class="count-num" data-count="4" data-suffix="+">4+</span></div>
-          <div class="label">Years Experience</div>
-        </div>
-        <div class="stat-item">
-          <div class="num"><span class="count-num" data-count="100" data-suffix="+">100+</span></div>
-          <div class="label">Projects Delivered</div>
-        </div>
-        <div class="stat-item">
-          <div class="num"><span class="count-num" data-count="40" data-suffix="+">30+</span></div>
-          <div class="label">Clients</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════
-       EXPERIENCE
-  ════════════════════════════════ -->
-  <section id="experience" aria-label="Experience">
-    <div class="reveal">
-      <p class="section-label">Career</p>
-      <h2 class="section-title">Experience</h2>
-      <div class="section-divider"></div>
-    </div>
-
+<!-- ═══ CAREER / EXPERIENCE ═══ -->
+<section id="career" class="section section-dark">
+  <div class="career-inner reveal">
+    <p class="career-label">CAREER</p>
+    <h2 class="career-heading">Experience</h2>
+    <div class="career-line-accent"></div>
     <div class="timeline">
 
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-connector"></div>
-        <div class="tl-body">
-          <div class="tl-period">September 2025 — Present</div>
-          <h3 class="tl-role">Senior Graphic Designer</h3>
-          <p class="tl-company">Toony Studios</p>
-          <p class="tl-desc">Leading visual design for animated and creative studio projects, developing brand assets,
-            campaign materials, and art direction.</p>
+      <div class="timeline-item">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">SEPTEMBER 2025 — PRESENT</span>
+          <h3 class="timeline-role">Senior Graphic Designer</h3>
+          <p class="timeline-company">Toony Studios</p>
+          <p class="timeline-desc">Leading visual design for animated and creative studio projects, developing brand assets, campaign materials, and art direction.</p>
         </div>
       </div>
 
-      <div class="tl-item reveal reveal-delay-1">
-        <div class="tl-dot"></div>
-        <div class="tl-connector"></div>
-        <div class="tl-body">
-          <div class="tl-period">2024 — September 2025</div>
-          <h3 class="tl-role">Senior Graphic Designer</h3>
-          <p class="tl-company">Pranada Media</p>
-          <p class="tl-desc">Designed high-impact visual assets for film and media productions including cinematic
-            posters, DI color grading, and campaign graphics.</p>
+      <div class="timeline-item">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024 — SEPTEMBER 2025</span>
+          <h3 class="timeline-role">Senior Graphic Designer</h3>
+          <p class="timeline-company">Pranada Media</p>
+          <p class="timeline-desc">Designed high-impact visual assets for film and media productions including cinematic posters, campaign graphics, and brand identity work.</p>
         </div>
       </div>
 
-      <div class="tl-item reveal reveal-delay-2">
-        <div class="tl-dot tl-dot--past"></div>
-        <div class="tl-body">
-          <div class="tl-period">2020 — 2023</div>
-          <h3 class="tl-role">Junior Graphic Designer</h3>
-          <p class="tl-company">Freelance</p>
-          <p class="tl-desc">Delivered branding, illustration, typography, and visual design work for a range of clients
-            across entertainment and commercial sectors.</p>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2020 — 2023</span>
+          <h3 class="timeline-role">Junior Graphic Designer</h3>
+          <p class="timeline-company">Freelance</p>
+          <p class="timeline-desc">Delivered branding, illustration, typography, and visual design work for a range of clients across entertainment and commercial sectors.</p>
         </div>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="full-divider"></div>
+<!-- ═══ WORK / PORTFOLIO ═══ -->
+<section id="work" class="section section-dark">
+  <h2 class="section-title reveal">WORK</h2>
 
-  <!-- ════════════════════════════════
-       CATEGORIES
-  ════════════════════════════════ -->
-  <section id="categories" aria-label="Portfolio Categories">
-    <div class="reveal">
-      <p class="section-label">Portfolio</p>
-      <h2 class="section-title">Select a Category</h2>
-      <div class="section-divider"></div>
+  <!-- CINEMATIC POSTERS -->
+  <div class="layer-group reveal">
+    <div class="layer-group-header">
+      <span class="layer-arrow">▶</span>
+      <span class="layer-group-label">CINEMATIC POSTERS</span>
+      <span class="layer-count">5 layers</span>
     </div>
-
-    <div class="cat-grid">
-
-      <article class="cat-card reveal reveal-delay-1" data-target="posters" role="button" tabindex="0"
-        aria-label="View Poster Designs">
-        <img src="cinematic poster 2.jpg" alt="Poster Designs" loading="lazy" />
-        <div class="cat-card-overlay"></div>
-        <div class="cat-card-body">
-          <p class="cat-number">01</p>
-          <h3 class="cat-name">Poster Designs</h3>
-        </div>
-        <span class="cat-arrow" aria-hidden="true">→</span>
-      </article>
-
-      <article class="cat-card reveal reveal-delay-2" data-target="di" role="button" tabindex="0"
-        aria-label="View DI Color Grading">
-        <img src="DI 1.png" alt="DI Color Grading" loading="lazy" />
-        <div class="cat-card-overlay"></div>
-        <div class="cat-card-body">
-          <p class="cat-number">02</p>
-          <h3 class="cat-name">DI Color Grading</h3>
-        </div>
-        <span class="cat-arrow" aria-hidden="true">→</span>
-      </article>
-
-      <article class="cat-card reveal reveal-delay-3" data-target="logos" role="button" tabindex="0"
-        aria-label="View Logo Designs">
-        <img src="logo 2.png" alt="Logo Designs" loading="lazy" />
-        <div class="cat-card-overlay"></div>
-        <div class="cat-card-body">
-          <p class="cat-number">03</p>
-          <h3 class="cat-name">Logo Designs</h3>
-        </div>
-        <span class="cat-arrow" aria-hidden="true">→</span>
-      </article>
-
-      <article class="cat-card reveal reveal-delay-1" data-target="illustrations" role="button" tabindex="0"
-        aria-label="View Illustrations">
-        <img src="illustations 3.png" alt="Illustrations" loading="lazy" />
-        <div class="cat-card-overlay"></div>
-        <div class="cat-card-body">
-          <p class="cat-number">04</p>
-          <h3 class="cat-name">Illustrations</h3>
-        </div>
-        <span class="cat-arrow" aria-hidden="true">→</span>
-      </article>
-
-      <article class="cat-card reveal reveal-delay-2" data-target="commercial" role="button" tabindex="0"
-        aria-label="View Commercial Designs">
-        <img src="COMERICIAL 1.png" alt="Commercial Designs" loading="lazy" />
-        <div class="cat-card-overlay"></div>
-        <div class="cat-card-body">
-          <p class="cat-number">05</p>
-          <h3 class="cat-name">Commercial Designs</h3>
-        </div>
-        <span class="cat-arrow" aria-hidden="true">→</span>
-      </article>
-
-      <article class="cat-card reveal reveal-delay-3" data-target="typography" role="button" tabindex="0"
-        aria-label="View Typography">
-        <img src="typograhy 1.jpg" alt="Typography" loading="lazy" />
-        <div class="cat-card-overlay"></div>
-        <div class="cat-card-body">
-          <p class="cat-number">06</p>
-          <h3 class="cat-name">Typography</h3>
-        </div>
-        <span class="cat-arrow" aria-hidden="true">→</span>
-      </article>
-
-    </div>
-  </section>
-
-  <div class="full-divider"></div>
-
-  <!-- ════════════════════════════════
-       POSTER DESIGNS
-  ════════════════════════════════ -->
-  <div class="portfolio-section" id="posters">
-    <div class="portfolio-section-header">
-      <div class="left reveal">
-        <p class="section-label">01 — Portfolio</p>
-        <h2 class="section-title">Poster Designs</h2>
-        <div class="section-divider"></div>
-      </div>
-      <a class="back-to-top-cat" href="#categories" aria-label="Back to categories">↑ All Categories</a>
-    </div>
-
-    <div class="port-grid cols-3">
-      <div class="port-item reveal">
-        <img src="cinematic poster 1.png" alt="Cinematic Poster 1" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="cinematic poster 2.jpg" alt="Cinematic Poster 2" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-2">
-        <img src="cinematic poster 3.jpg" alt="Cinematic Poster 3" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="cinematic poster 4.jpg" alt="Cinematic Poster 4" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-2">
-        <img src="cinematic poster 5.png" alt="Cinematic Poster 5" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
+    <div class="layer-group-content">
+      <div class="layer-items">
+        <div class="layer-card"><img src="cinematic poster 1.png" alt="Cinematic Poster 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 1.png" alt=""></div><span class="layer-card-name">cinematic_poster_01</span></div></div>
+        <div class="layer-card"><img src="cinematic poster 2.jpg" alt="Cinematic Poster 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 2.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_02</span></div></div>
+        <div class="layer-card"><img src="cinematic poster 3.jpg" alt="Cinematic Poster 3" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 3.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_03</span></div></div>
+        <div class="layer-card"><img src="cinematic poster 4.jpg" alt="Cinematic Poster 4" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 4.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_04</span></div></div>
+        <div class="layer-card"><img src="cinematic poster 5.png" alt="Cinematic Poster 5" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 5.png" alt=""></div><span class="layer-card-name">cinematic_poster_05</span></div></div>
       </div>
     </div>
   </div>
 
-  <div class="full-divider"></div>
-
-  <!-- ════════════════════════════════
-       DI COLOR GRADING
-  ════════════════════════════════ -->
-  <div class="portfolio-section" id="di">
-    <div class="portfolio-section-header">
-      <div class="left reveal">
-        <p class="section-label">02 — Portfolio</p>
-        <h2 class="section-title">DI Color Grading</h2>
-        <div class="section-divider"></div>
-      </div>
-      <a class="back-to-top-cat" href="#categories" aria-label="Back to categories">↑ All Categories</a>
+  <!-- COMMERCIAL POSTERS -->
+  <div class="layer-group reveal">
+    <div class="layer-group-header">
+      <span class="layer-arrow">▶</span>
+      <span class="layer-group-label">COMMERCIAL POSTERS</span>
+      <span class="layer-count">2 layers</span>
     </div>
-
-    <div class="port-grid cols-2">
-      <div class="port-item reveal">
-        <img src="DI 1.png" alt="DI Color Grading 1" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="DI 2.png" alt="DI Color Grading 2" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
+    <div class="layer-group-content">
+      <div class="layer-items">
+        <div class="layer-card"><img src="COMERICIAL 1.png" alt="Commercial Poster 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="COMERICIAL 1.png" alt=""></div><span class="layer-card-name">commercial_poster_01</span></div></div>
+        <div class="layer-card"><img src="COMERICIAL 2.png" alt="Commercial Poster 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="COMERICIAL 2.png" alt=""></div><span class="layer-card-name">commercial_poster_02</span></div></div>
       </div>
     </div>
   </div>
 
-  <div class="full-divider"></div>
-
-  <!-- ════════════════════════════════
-       LOGO DESIGNS
-  ════════════════════════════════ -->
-  <div class="portfolio-section" id="logos">
-    <div class="portfolio-section-header">
-      <div class="left reveal">
-        <p class="section-label">03 — Portfolio</p>
-        <h2 class="section-title">Logo Designs</h2>
-        <div class="section-divider"></div>
-      </div>
-      <a class="back-to-top-cat" href="#categories" aria-label="Back to categories">↑ All Categories</a>
+  <!-- ILLUSTRATIONS -->
+  <div class="layer-group reveal">
+    <div class="layer-group-header">
+      <span class="layer-arrow">▶</span>
+      <span class="layer-group-label">ILLUSTRATIONS</span>
+      <span class="layer-count">5 layers</span>
     </div>
-
-    <div class="port-grid cols-2">
-      <div class="port-item reveal">
-        <img src="logo 1.png" alt="Logo Design 1" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="logo 2.png" alt="Logo Design 2" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
+    <div class="layer-group-content">
+      <div class="layer-items">
+        <div class="layer-card"><img src="illustations 1.png" alt="Illustration 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 1.png" alt=""></div><span class="layer-card-name">illustration_01</span></div></div>
+        <div class="layer-card"><img src="illustations 2.png" alt="Illustration 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 2.png" alt=""></div><span class="layer-card-name">illustration_02</span></div></div>
+        <div class="layer-card"><img src="illustations 3.png" alt="Illustration 3" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 3.png" alt=""></div><span class="layer-card-name">illustration_03</span></div></div>
+        <div class="layer-card"><img src="illustations 4.png" alt="Illustration 4" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 4.png" alt=""></div><span class="layer-card-name">illustration_04</span></div></div>
+        <div class="layer-card"><img src="illustations 5.png" alt="Illustration 5" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 5.png" alt=""></div><span class="layer-card-name">illustration_05</span></div></div>
       </div>
     </div>
   </div>
 
-  <div class="full-divider"></div>
-
-  <!-- ════════════════════════════════
-       ILLUSTRATIONS
-  ════════════════════════════════ -->
-  <div class="portfolio-section" id="illustrations">
-    <div class="portfolio-section-header">
-      <div class="left reveal">
-        <p class="section-label">04 — Portfolio</p>
-        <h2 class="section-title">Illustrations</h2>
-        <div class="section-divider"></div>
-      </div>
-      <a class="back-to-top-cat" href="#categories" aria-label="Back to categories">↑ All Categories</a>
+  <!-- LOGO DESIGNS -->
+  <div class="layer-group reveal">
+    <div class="layer-group-header">
+      <span class="layer-arrow">▶</span>
+      <span class="layer-group-label">LOGO DESIGNS</span>
+      <span class="layer-count">2 layers</span>
     </div>
-
-    <div class="port-grid cols-3">
-      <div class="port-item reveal">
-        <img src="illustations 1.png" alt="Illustration 1" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="illustations 2.png" alt="Illustration 2" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-2">
-        <img src="illustations 3.png" alt="Illustration 3" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="illustations 4.png" alt="Illustration 4" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-2">
-        <img src="illustations 5.png" alt="Illustration 5" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
+    <div class="layer-group-content">
+      <div class="layer-items">
+        <div class="layer-card"><img src="logo 1.png" alt="Logo Design 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="logo 1.png" alt=""></div><span class="layer-card-name">logo_design_01</span></div></div>
+        <div class="layer-card"><img src="logo 2.png" alt="Logo Design 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="logo 2.png" alt=""></div><span class="layer-card-name">logo_design_02</span></div></div>
       </div>
     </div>
   </div>
 
-  <div class="full-divider"></div>
-
-  <!-- ════════════════════════════════
-       COMMERCIAL DESIGNS
-  ════════════════════════════════ -->
-  <div class="portfolio-section" id="commercial">
-    <div class="portfolio-section-header">
-      <div class="left reveal">
-        <p class="section-label">05 — Portfolio</p>
-        <h2 class="section-title">Commercial Designs</h2>
-        <div class="section-divider"></div>
-      </div>
-      <a class="back-to-top-cat" href="#categories" aria-label="Back to categories">↑ All Categories</a>
+  <!-- TYPOGRAPHY -->
+  <div class="layer-group reveal">
+    <div class="layer-group-header">
+      <span class="layer-arrow">▶</span>
+      <span class="layer-group-label">TYPOGRAPHY</span>
+      <span class="layer-count">3 layers</span>
     </div>
-
-    <div class="port-grid cols-2">
-      <div class="port-item reveal">
-        <img src="COMERICIAL 1.png" alt="Commercial Design 1" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="COMERICIAL 2.png" alt="Commercial Design 2" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
+    <div class="layer-group-content">
+      <div class="layer-items">
+        <div class="layer-card"><img src="typograhy 1.jpg" alt="Typography 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="typograhy 1.jpg" alt=""></div><span class="layer-card-name">typography_01</span></div></div>
+        <div class="layer-card"><img src="typograhy 2.jpg" alt="Typography 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="typograhy 2.jpg" alt=""></div><span class="layer-card-name">typography_02</span></div></div>
+        <div class="layer-card"><img src="typograhy 3.jpg" alt="Typography 3" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="typograhy 3.jpg" alt=""></div><span class="layer-card-name">typography_03</span></div></div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="full-divider"></div>
-
-  <!-- ════════════════════════════════
-       TYPOGRAPHY
-  ════════════════════════════════ -->
-  <div class="portfolio-section" id="typography">
-    <div class="portfolio-section-header">
-      <div class="left reveal">
-        <p class="section-label">06 — Portfolio</p>
-        <h2 class="section-title">Typography</h2>
-        <div class="section-divider"></div>
-      </div>
-      <a class="back-to-top-cat" href="#categories" aria-label="Back to categories">↑ All Categories</a>
-    </div>
-
-    <div class="port-grid cols-3">
-      <div class="port-item reveal">
-        <img src="typograhy 1.jpg" alt="Typography 1" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-1">
-        <img src="typograhy 2.jpg" alt="Typography 2" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-      <div class="port-item reveal reveal-delay-2">
-        <img src="typograhy 3.jpg" alt="Typography 3" loading="lazy" />
-        <div class="port-item-overlay">
-          <div class="port-zoom-icon">&#8599;</div>
-        </div>
-      </div>
-    </div>
+<!-- ═══ CLOSING MESSAGE ═══ -->
+<section id="closing" class="section section-light">
+  <div class="reveal">
+    <p class="closing-quote">"Every great design begins with a story worth telling.<br>Thank you for visiting — I hope my work speaks to you."</p>
+    <p class="closing-author">— LOKESH K</p>
+    <img class="closing-sig" src="Lokesh K Signature.png" alt="Lokesh K Signature">
   </div>
+</section>
 
-  <div class="full-divider"></div>
-
-  <!-- ════════════════════════════════
-       CONTACT
-  ════════════════════════════════ -->
-  <section id="contact" aria-label="Contact">
-    <p class="contact-eyebrow reveal">Get In Touch</p>
-    <h2 class="contact-heading reveal reveal-delay-1">Let's Work<br />Together</h2>
-    <p class="contact-sub reveal reveal-delay-2">
-      Looking for a graphic designer who thinks in frames, feels in color,
-      and delivers with precision? Let's create something extraordinary.
-    </p>
-
-    <div class="contact-links reveal reveal-delay-3">
-
-      <a href="mailto:lokeshkolli75@gmail.com" class="contact-btn primary" id="btn-email" aria-label="Send Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" aria-hidden="true">
-          <rect x="2" y="4" width="20" height="16" rx="2" />
-          <path d="m22,7-8.97,5.7a1.94,1.94 0 0,1 -2.06,0L2,7" />
-        </svg>
-        lokeshkolli75@gmail.com
-      </a>
-
-      <a href="https://www.behance.net/Lokesh_k" target="_blank" rel="noopener noreferrer" class="contact-btn"
-        id="btn-behance" aria-label="Visit Behance profile">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path
-            d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 1.202.61 1.86 1.895 1.86.76 0 1.37-.penaltynd-.37-.77-.553-1.832H23.726zm-5.423-3.611c-.07-.927-.522-1.66-1.63-1.66-1.023 0-1.585.626-1.741 1.66h3.371zM9.197 12.42c.756-.306 1.177-1.005 1.177-1.973 0-2.248-1.684-2.947-3.734-2.947H0v11h6.769c2.205 0 4.188-.84 4.188-3.316 0-1.298-.49-2.258-1.76-2.764zM3.02 9.5h3.38c.746 0 1.355.314 1.355 1.168 0 .856-.622 1.195-1.418 1.195H3.02V9.5zm3.699 5.5H3.02v-2.5h3.698c.916 0 1.538.384 1.538 1.31 0 .895-.67 1.19-1.537 1.19z" />
-        </svg>
-        Behance
-      </a>
-
-      <a href="https://www.linkedin.com/in/lokeshk79/" target="_blank" rel="noopener noreferrer" class="contact-btn"
-        id="btn-linkedin" aria-label="Visit LinkedIn profile">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
-          <circle cx="4" cy="4" r="2" />
-        </svg>
-        LinkedIn
-      </a>
-
-    </div>
-
-    <div class="signature-wrap reveal">
-      <img class="signature-img" src="Lokesh K Signature.png" alt="Lokesh K Signature" loading="lazy" />
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════
-       FOOTER
-  ════════════════════════════════ -->
-  <footer>
-    <p>&copy; 2024 <span>Lokesh K</span> &mdash; Graphic Designer &amp; DI Colorist. All rights reserved.</p>
-  </footer>
-
-  <!-- ════════════════════════════════
-       LIGHTBOX
-  ════════════════════════════════ -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <span id="lb-close" role="button" aria-label="Close lightbox" tabindex="0">&times;</span>
-    <span id="lb-prev" role="button" aria-label="Previous image" tabindex="0">&#8249;</span>
-    <img id="lb-img" src="" alt="Portfolio image enlarged" />
-    <span id="lb-next" role="button" aria-label="Next image" tabindex="0">&#8250;</span>
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="section section-dark">
+  <div class="contact-inner reveal">
+    <h2 class="section-title">LET'S CONNECT</h2>
+    <p class="contact-subtitle">Have a project in mind? Drop me a message.</p>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">SEND MESSAGE</button>
+      <p id="form-status" class="form-status"></p>
+    </form>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ═══ FOOTER ═══ -->
+<footer id="footer" class="section-dark">
+  <div class="social-links">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/lokeshk79/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+    </a>
+    <!-- Behance -->
+    <a href="https://www.behance.net/Lokesh_k" target="_blank" rel="noopener" aria-label="Behance">
+      <svg viewBox="0 0 24 24"><path d="M7.5 11c1.38 0 2.5-.56 2.5-2.12S8.88 6.5 7.5 6.5H3v9h4.5c1.62 0 3-.75 3-2.62S9.12 11 7.5 11zM5 8h2.25c.69 0 1.25.31 1.25 1s-.56 1-1.25 1H5V8zm2.5 6H5v-2.5h2.5c.81 0 1.5.38 1.5 1.25S8.31 14 7.5 14zM15 7.5c-2.49 0-4.5 1.79-4.5 4.5s2.01 4.5 4.5 4.5c1.93 0 3.28-.79 4.04-2.5h-2.14c-.28.5-.97.88-1.9.88-1.38 0-2.25-.81-2.38-2h6.5c.05-.33.07-.57.07-.88 0-2.71-2.01-4.5-4.5-4.5h.31zm-2.19 3.5c.25-1 1.06-1.62 2.19-1.62s1.94.63 2.19 1.62h-4.38zM14 5h5v1.5h-5V5z"/></svg>
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/sun_nylokesh/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© 2025 Lokesh K. Designed with passion. All rights reserved.</p>
+</footer>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div id="lightbox">
+  <img id="lb-img" src="" alt="Portfolio view">
+  <button class="lb-close" aria-label="Close">✕</button>
+  <button class="lb-prev" aria-label="Previous">‹</button>
+  <button class="lb-next" aria-label="Next">›</button>
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>

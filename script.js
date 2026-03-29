@@ -1,236 +1,262 @@
-/* ====================================
-   LOKESH K — CINEMATIC PORTFOLIO
-   script.js
-   ==================================== */
+document.addEventListener('DOMContentLoaded', () => {
 
-(function () {
-  'use strict';
+  /* ═══ CUSTOM CURSOR (pen tool only, no dot) ═══ */
+  const cursorMain = document.getElementById('cursor-main');
 
-  /* ════════════════════════════════════
-     CINEMATIC INTRO ANIMATION
-  ════════════════════════════════════ */
-  function runIntro() {
-    const screen   = document.getElementById('intro-screen');
-    const veil     = screen  && screen.querySelector('.intro-veil');
-    const introBg  = document.getElementById('intro-bg');
-    const name     = screen  && screen.querySelector('.intro-name');
-    const line     = screen  && screen.querySelector('.intro-line');
-    const title    = screen  && screen.querySelector('.intro-title');
+  document.addEventListener('mousemove', e => {
+    cursorMain.style.left = e.clientX + 'px';
+    cursorMain.style.top = e.clientY + 'px';
+  });
 
-    if (!screen) { unlockScroll(); return; }
+  // Detect light sections for cursor color swap
+  const lightSections = document.querySelectorAll('.section-light');
+  let mouseY = 0;
+  function updateCursorColor(e) {
+    mouseY = e.clientY;
+    let inLight = false;
+    lightSections.forEach(sec => {
+      const r = sec.getBoundingClientRect();
+      if (mouseY >= r.top && mouseY <= r.bottom) inLight = true;
+    });
+    document.body.classList.toggle('light-section', inLight);
+  }
+  document.addEventListener('mousemove', updateCursorColor);
 
-    // Phase 1 (300ms) — lift the dark veil so posters gently appear
-    setTimeout(() => {
-      if (veil)    veil.classList.add('gone');
-      if (introBg) introBg.classList.add('reveal-bg');
-    }, 300);
+  /* ═══ INTRO ANIMATION (JS character-by-character typing) ═══ */
+  const overlay = document.getElementById('intro-overlay');
+  const introTyped = document.getElementById('intro-typed');
+  const introCaret = document.getElementById('intro-caret');
+  const introName = document.getElementById('intro-name');
+  const introRole = document.getElementById('intro-role');
+  const introSig = document.getElementById('intro-sig');
+  const introCursorBlink = document.getElementById('intro-cursor-blink');
+  const navbar = document.getElementById('navbar');
 
-    // Phase 2 (900ms) — name fades up
-    setTimeout(() => {
-      if (name) name.classList.add('show');
-    }, 900);
-
-    // Phase 3 (1200ms) — divider line grows
-    setTimeout(() => {
-      if (line) line.classList.add('show');
-    }, 1200);
-
-    // Phase 4 (1400ms) — subtitle fades up
-    setTimeout(() => {
-      if (title) title.classList.add('show');
-    }, 1400);
-
-    // Phase 5 (3200ms) — fade entire intro out
-    setTimeout(() => {
-      screen.classList.add('exit');
-    }, 3200);
-
-    // Phase 6 (4400ms) — remove from DOM, unlock scroll
-    setTimeout(() => {
-      screen.remove();
-      unlockScroll();
-    }, 4400);
+  let introEnded = false;
+  function endIntro() {
+    if (introEnded) return;
+    introEnded = true;
+    if (typingInterval) clearInterval(typingInterval);
+    overlay.classList.add('hidden');
+    navbar.classList.add('visible');
+    document.body.style.overflow = '';
   }
 
-  function unlockScroll() {
-    document.body.classList.remove('is-loading');
-  }
+  document.body.style.overflow = 'hidden';
 
-  runIntro();
+  const fullName = 'LOKESH K';
+  let charIndex = 0;
+  let typingInterval = null;
 
-  /* ════════════════════════════════════
-     SCROLL PROGRESS → CSS VAR
-  ════════════════════════════════════ */
-  const root = document.documentElement;
+  // Step 1: Show blinking cursor for 600ms, then start typing
+  setTimeout(() => {
+    introCursorBlink.style.display = 'none';
+    introName.classList.add('show');
 
-  function updateScroll() {
-    const hero  = document.getElementById('hero');
-    const heroH = hero ? hero.offsetHeight : window.innerHeight;
-    const scroll = Math.min(window.scrollY / heroH, 1);
-    root.style.setProperty('--scroll', scroll.toFixed(4));
-
-    /* Navbar visibility */
-    const nav = document.getElementById('navbar');
-    if (nav) {
-      if (window.scrollY > heroH * 0.6) {
-        nav.classList.add('visible');
+    // Step 2: Type one character every 100ms
+    typingInterval = setInterval(() => {
+      if (charIndex < fullName.length) {
+        introTyped.textContent += fullName[charIndex];
+        charIndex++;
       } else {
-        nav.classList.remove('visible');
+        clearInterval(typingInterval);
+        typingInterval = null;
+
+        // Step 3: After 400ms pause, fade in role
+        setTimeout(() => {
+          introRole.classList.add('show');
+
+          // Step 4: After 800ms more, fade in signature
+          setTimeout(() => {
+            introSig.classList.add('show');
+            introCaret.classList.add('hide');
+
+            // Step 5: After 1200ms more, end intro
+            setTimeout(endIntro, 1200);
+          }, 800);
+        }, 400);
       }
-    }
+    }, 100);
+  }, 600);
+
+  document.getElementById('skip-intro').addEventListener('click', endIntro);
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) endIntro();
+  });
+
+  /* ═══ SCROLL PROGRESS ═══ */
+  const scrollBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    scrollBar.style.height = pct + '%';
+  });
+
+  /* ═══ SCROLL REVEAL ═══ */
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => revealObs.observe(el));
+
+  /* ═══ NAV ACTIVE HIGHLIGHT ═══ */
+  const sections = document.querySelectorAll('.section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const id = entry.target.id;
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => navObs.observe(s));
+
+  /* ═══ HAMBURGER ═══ */
+  const hamburger = document.querySelector('.hamburger');
+  const navLinksUl = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinksUl.classList.toggle('open');
+  });
+  navLinksUl.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinksUl.classList.remove('open');
+    });
+  });
+
+  /* ═══ LAYER GROUPS (Accordion) ═══ */
+  document.querySelectorAll('.layer-group-header').forEach(header => {
+    header.addEventListener('click', () => {
+      header.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Open first group by default
+  const firstGroup = document.querySelector('.layer-group');
+  if (firstGroup) firstGroup.classList.add('open');
+
+  /* ═══ LIGHTBOX ═══ */
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  let lbImages = [];
+  let lbIndex = 0;
+
+  // Collect all portfolio images
+  document.querySelectorAll('.layer-card img').forEach(img => {
+    lbImages.push(img.src);
+    img.addEventListener('click', () => {
+      lbIndex = lbImages.indexOf(img.src);
+      lbImg.src = img.src;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.querySelector('.lb-close').addEventListener('click', closeLb);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLb(); });
+
+  function closeLb() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
   }
 
-  window.addEventListener('scroll', updateScroll, { passive: true });
-  updateScroll();
+  document.querySelector('.lb-prev').addEventListener('click', e => {
+    e.stopPropagation();
+    lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length;
+    lbImg.src = lbImages[lbIndex];
+  });
 
-  /* ════════════════════════════════════
-     INTERSECTION OBSERVER – REVEAL
-  ════════════════════════════════════ */
-  function initReveal() {
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer  = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
+  document.querySelector('.lb-next').addEventListener('click', e => {
+    e.stopPropagation();
+    lbIndex = (lbIndex + 1) % lbImages.length;
+    lbImg.src = lbImages[lbIndex];
+  });
+
+  // Keyboard nav
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') { lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; lbImg.src = lbImages[lbIndex]; }
+    if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % lbImages.length; lbImg.src = lbImages[lbIndex]; }
+  });
+
+  /* ═══ STATS COUNTER ANIMATION ═══ */
+  const statsRow = document.querySelector('.stats-row');
+  if (statsRow) {
+    const statsObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          statsObs.unobserve(entry.target);
+          animateStats();
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    revealEls.forEach(el => observer.observe(el));
+    }, { threshold: 0.5 });
+    statsObs.observe(statsRow);
   }
-  initReveal();
 
-  /* ════════════════════════════════════
-     CATEGORY CARD → SMOOTH SCROLL
-  ════════════════════════════════════ */
-  document.querySelectorAll('[data-target]').forEach(card => {
-    card.addEventListener('click', () => {
-      const target = document.getElementById(card.dataset.target);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function animateStats() {
+    const statEls = document.querySelectorAll('.stat-number');
+    statEls.forEach(el => {
+      const target = parseInt(el.getAttribute('data-target'));
+      const duration = target <= 10 ? 1200 : target <= 50 ? 1500 : 1800;
+      const startTime = performance.now();
+
+      function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOut(progress);
+        const current = Math.round(easedProgress * target);
+        el.textContent = current + (progress >= 1 ? '+' : '');
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
       }
+      requestAnimationFrame(update);
     });
-    /* Keyboard accessibility */
-    card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        card.click();
-      }
-    });
+  }
+
+  /* ═══ CONTACT FORM (EmailJS) ═══ */
+  // Initialize EmailJS — replace YOUR_PUBLIC_KEY with your EmailJS public key
+  // emailjs.init("YOUR_PUBLIC_KEY");
+
+  const form = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    formStatus.textContent = 'Sending...';
+
+    // ── EmailJS Integration ──
+    // Replace these placeholders with your actual EmailJS credentials:
+    //   SERVICE_ID  → your EmailJS service ID
+    //   TEMPLATE_ID → your EmailJS template ID
+    //
+    // emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', form)
+    //   .then(() => {
+    //     formStatus.textContent = 'Message sent successfully!';
+    //     form.reset();
+    //   }, (err) => {
+    //     formStatus.textContent = 'Failed to send. Please try again.';
+    //     console.error(err);
+    //   });
+
+    // Fallback: Formspree (replace YOUR_FORM_ID)
+    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(r => {
+      if (r.ok) { formStatus.textContent = 'Message sent successfully!'; form.reset(); }
+      else { formStatus.textContent = 'Failed to send. Please try again.'; }
+    })
+    .catch(() => { formStatus.textContent = 'Network error. Please try again.'; });
   });
 
-  /* ════════════════════════════════════
-     LIGHTBOX
-  ════════════════════════════════════ */
-  const lightbox = document.getElementById('lightbox');
-  const lbImg    = document.getElementById('lb-img');
-  const lbClose  = document.getElementById('lb-close');
-  const lbPrev   = document.getElementById('lb-prev');
-  const lbNext   = document.getElementById('lb-next');
-
-  let currentGallery = [];
-  let currentIndex   = 0;
-
-  function openLightbox(src, gallery, index) {
-    lbImg.src         = src;
-    currentGallery    = gallery;
-    currentIndex      = index;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-    setTimeout(() => { lbImg.src = ''; }, 350);
-  }
-
-  function showSlide(index) {
-    if (!currentGallery.length) return;
-    currentIndex = (index + currentGallery.length) % currentGallery.length;
-    lbImg.style.opacity = '0';
-    setTimeout(() => {
-      lbImg.src = currentGallery[currentIndex];
-      lbImg.style.opacity = '1';
-    }, 180);
-  }
-
-  if (lbClose) lbClose.addEventListener('click', closeLightbox);
-  if (lbPrev)  lbPrev.addEventListener('click',  () => showSlide(currentIndex - 1));
-  if (lbNext)  lbNext.addEventListener('click',  () => showSlide(currentIndex + 1));
-  if (lightbox) lightbox.addEventListener('click', e => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener('keydown', e => {
-    if (!lightbox.classList.contains('active')) return;
-    if (e.key === 'Escape')     closeLightbox();
-    if (e.key === 'ArrowLeft')  showSlide(currentIndex - 1);
-    if (e.key === 'ArrowRight') showSlide(currentIndex + 1);
-  });
-
-  lbImg.style.transition = 'opacity 0.18s ease';
-
-  /* Wire up portfolio items */
-  function initGalleries() {
-    const sections = document.querySelectorAll('.portfolio-section');
-    sections.forEach(section => {
-      const items = section.querySelectorAll('.port-item');
-      const srcs  = Array.from(items).map(el => el.querySelector('img').src);
-      items.forEach((item, idx) => {
-        item.addEventListener('click', () => openLightbox(srcs[idx], srcs, idx));
-      });
-    });
-  }
-  initGalleries();
-
-  /* ════════════════════════════════════
-     MOBILE HAMBURGER
-  ════════════════════════════════════ */
-  const hamburger = document.querySelector('.nav-hamburger');
-  const navLinks  = document.querySelector('.nav-links');
-
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-      });
-    });
-  }
-
-  /* ════════════════════════════════════
-     SMOOTH NUMBER COUNTER
-  ════════════════════════════════════ */
-  function animateCount(el) {
-    const target = parseInt(el.dataset.count, 10);
-    const dur    = 1800;
-    const step   = 16;
-    const total  = dur / step;
-    let count    = 0;
-    const ticker = setInterval(() => {
-      count++;
-      const val = Math.round(target * (count / total));
-      el.textContent = val + (el.dataset.suffix || '');
-      if (count >= total) {
-        el.textContent = target + (el.dataset.suffix || '');
-        clearInterval(ticker);
-      }
-    }, step);
-  }
-
-  const counterObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.count-num').forEach(animateCount);
-        counterObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.4 });
-
-  document.querySelectorAll('.about-stats').forEach(el => counterObs.observe(el));
-
-})();
+});
