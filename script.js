@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ═══ CUSTOM CURSOR (pen tool only, no dot) ═══ */
   const cursorMain = document.getElementById('cursor-main');
+  const scrollIndicator = document.getElementById('scroll-indicator');
 
   document.addEventListener('mousemove', e => {
     cursorMain.style.left = e.clientX + 'px';
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.add('hidden');
     navbar.classList.add('visible');
     document.body.style.overflow = '';
+    scrollIndicator.classList.add('visible');
   }
 
   document.body.style.overflow = 'hidden';
@@ -258,5 +260,18 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(() => { formStatus.textContent = 'Network error. Please try again.'; });
   });
+
+  scrollIndicator.addEventListener('click', () => {
+    document.getElementById('about')
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      scrollIndicator.classList.add('hidden');
+    } else {
+      scrollIndicator.classList.remove('hidden');
+    }
+  }, { passive: true });
 
 });
