@@ -38,7 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (introEnded) return;
     introEnded = true;
     if (typingInterval) clearInterval(typingInterval);
-    overlay.classList.add('hidden');
+
+    const hero = document.getElementById('hero');
+
+    // Start hero animation BEFORE intro disappears
+    hero.style.opacity = '1';
+    hero.style.transform = 'scale(1)';
+
+    setTimeout(() => {
+      document.querySelector('.hero-content').classList.add('show');
+    }, 300);
+
+    // Fade out intro smoothly
+    overlay.style.opacity = '0';
+    overlay.style.filter = 'blur(6px)';
+
+    // Remove overlay AFTER animation completes
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 800);
+
     navbar.classList.add('visible');
     document.body.style.overflow = '';
     scrollIndicator.classList.add('visible');

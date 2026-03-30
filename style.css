@@ -66,17 +66,34 @@ body.light-section #cursor-main svg path {
 #intro-overlay {
   position: fixed;
   inset: 0;
-  background: var(--charcoal);
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
   z-index: 90000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.8s ease, visibility 0.8s;
+  transition: opacity 0.8s ease, filter 0.8s ease, background-color 0.8s ease, visibility 0.8s;
+  animation: introGridFade 1s ease;
+}
+
+@keyframes introGridFade {
+  from {
+    background-position: 0 20px;
+    opacity: 0;
+  }
+  to {
+    background-position: 0 0;
+    opacity: 1;
+  }
 }
 
 #intro-overlay.hidden {
   opacity: 0;
+  filter: blur(6px);
   visibility: hidden;
   pointer-events: none;
 }
@@ -84,7 +101,7 @@ body.light-section #cursor-main svg path {
 #intro-cursor-blink {
   width: 2px;
   height: 28px;
-  background: var(--white);
+  background: #1C1C1E;
   animation: blink 0.6s step-end infinite;
   margin-bottom: 12px;
 }
@@ -100,7 +117,7 @@ body.light-section #cursor-main svg path {
   font-size: clamp(28px, 5vw, 48px);
   font-weight: 700;
   letter-spacing: 12px;
-  color: var(--white);
+  color: #1C1C1E;
   opacity: 0;
   width: auto;
   border-right: none;
@@ -115,7 +132,7 @@ body.light-section #cursor-main svg path {
 
 #intro-caret {
   font-weight: 300;
-  color: var(--white);
+  color: #1C1C1E;
   animation: blink-caret 0.6s step-end infinite;
 }
 
@@ -133,7 +150,7 @@ body.light-section #cursor-main svg path {
   font-family: var(--font-body);
   font-size: 14px;
   letter-spacing: 4px;
-  color: var(--mid-grey);
+  color: #555555;
   margin-top: 8px;
   opacity: 0;
   transition: opacity 0.8s ease 0.3s;
@@ -148,11 +165,11 @@ body.light-section #cursor-main svg path {
   opacity: 0;
   transition: opacity 1s ease;
   max-width: 120px;
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 #intro-sig.show {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 #skip-intro {
@@ -170,8 +187,8 @@ body.light-section #cursor-main svg path {
 }
 
 #skip-intro:hover {
-  color: var(--white);
-  border-color: var(--white);
+  color: #1C1C1E;
+  border-color: #1C1C1E;
 }
 
 /* ═══ NAV / TOOLBAR ═══ */
@@ -317,6 +334,9 @@ body.light-section #cursor-main svg path {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 1s ease, transform 1.2s ease;
 }
 
 .hero-grid-overlay {
@@ -338,6 +358,14 @@ body.light-section #cursor-main svg path {
   max-width: 1100px;
   width: 100%;
   z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-content.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-content h1 {
