@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lokesh K — Graphic Designer | Publicity Designer | Key Visual Artist</title>
-  <meta name="description" content="Portfolio of Lokesh K — Graphic Designer specializing in cinematic posters, key visuals, and brand identity design.">
+  <meta name="description"
+    content="Portfolio of Lokesh K — Graphic Designer specializing in cinematic posters, key visuals, and brand identity design.">
   <link rel="icon" type="image/png" sizes="32x32" href="LK Logo top icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="LK Logo top icon.png">
   <link rel="shortcut icon" href="LK Logo top icon.png">
@@ -13,311 +15,739 @@
   <!-- EmailJS SDK (uncomment and add your public key) -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
 </head>
+
 <body>
 
-<!-- Custom Cursor -->
-<div id="cursor-main">
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="#fff" stroke="none"/>
-  </svg>
-</div>
-
-<!-- Scroll Progress -->
-<div id="scroll-progress"></div>
-
-<!-- ═══ INTRO OVERLAY ═══ -->
-<div id="intro-overlay">
-  <div id="intro-cursor-blink"></div>
-  <div id="intro-name"><span id="intro-typed"></span><span id="intro-caret">|</span></div>
-  <div id="intro-role">GRAPHIC DESIGNER</div>
-  <img id="intro-sig" src="Lokesh K Signature.png" alt="Signature">
-  <button id="skip-intro">SKIP</button>
-</div>
-
-<!-- ═══ NAVBAR / TOOLBAR ═══ -->
-<nav id="navbar">
-  <span class="nav-brand">LOKESH K</span>
-  <button class="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#career">Career</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- ═══ HERO ═══ -->
-<section id="hero" class="section section-dark">
-  <div class="hero-grid-overlay"></div>
-  <div class="hero-content reveal">
-    <h1>LOKESH K</h1>
-    <p class="hero-subtitle">Graphic Designer · Publicity Designer · Key Visual Artist</p>
-    <img class="hero-signature" src="Lokesh K Signature.png" alt="Lokesh K Signature">
-    <a href="#work" class="hero-cta">VIEW MY WORK</a>
+  <!-- Custom Cursor -->
+  <div id="cursor-main">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+        fill="#fff" stroke="none" />
+    </svg>
   </div>
-  <div class="scroll-indicator" id="scroll-indicator">
-    <span class="scroll-text">SCROLL</span>
-    <div class="scroll-arrow">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 5v14M5 12l7 7 7-7" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══ INTRO OVERLAY ═══ -->
+  <div id="intro-overlay">
+    <div id="intro-cursor-blink"></div>
+    <div id="intro-name"><span id="intro-typed"></span><span id="intro-caret">|</span></div>
+    <div id="intro-role">GRAPHIC DESIGNER</div>
+    <img id="intro-sig" src="Lokesh K Signature.png" alt="Signature">
+    <button id="skip-intro">SKIP</button>
+  </div>
+
+  <!-- ═══ NAVBAR / TOOLBAR ═══ -->
+  <nav id="navbar">
+    <span class="nav-brand">LOKESH K</span>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" class="section section-dark">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content reveal">
+      <h1>LOKESH K</h1>
+      <p class="hero-subtitle">Graphic Designer · Publicity Designer · Key Visual Artist</p>
+      <img class="hero-signature" src="Lokesh K Signature.png" alt="Lokesh K Signature">
+      <a href="#work" class="hero-cta">VIEW MY WORK</a>
     </div>
-  </div>
-</section>
-
-<!-- ═══ ABOUT ═══ -->
-<section id="about" class="section section-light">
-  <div class="about-grid reveal">
-    <div class="about-text">
-      <h2 class="section-title" style="color:var(--charcoal)">ABOUT</h2>
-      <p>I'm Lokesh K, a Graphic Designer who turned a passion for creativity into a career. Coming from a Computer Science background, I found my true calling in the world of visual design — crafting cinematic posters, bold key visuals, and meaningful brand identities. I believe great design is not just seen — it's felt.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Photoshop</span>
-        <span class="skill-tag">Illustrator</span>
-        <span class="skill-tag">Poster Design</span>
-        <span class="skill-tag">Key Visual</span>
-        <span class="skill-tag">Typography</span>
-        <span class="skill-tag">Brand Identity</span>
-      </div>
-      <div class="stats-row">
-        <div class="stat-item">
-          <div class="stat-number" data-target="4">0</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="100">0</div>
-          <div class="stat-label">Projects Delivered</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="40">0</div>
-          <div class="stat-label">Clients</div>
-        </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span class="scroll-text">SCROLL</span>
+      <div class="scroll-arrow">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="#fff" stroke-width="1.2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
       </div>
     </div>
-    <div class="about-photo-wrap">
-      <img class="about-photo" src="Lokesh-K-profile-Picture.png" alt="Lokesh K" loading="lazy">
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ CAREER / EXPERIENCE ═══ -->
-<section id="career" class="section section-dark">
-  <div class="career-inner reveal">
-    <p class="career-label">CAREER</p>
-    <h2 class="career-heading">Experience</h2>
-    <div class="career-line-accent"></div>
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-dot active"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">SEPTEMBER 2025 — PRESENT</span>
-          <h3 class="timeline-role">Senior Graphic Designer</h3>
-          <p class="timeline-company">Toony Studios</p>
-          <p class="timeline-desc">Leading visual design for animated and creative studio projects, developing brand assets, campaign materials, and art direction.</p>
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section section-light">
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <h2 class="section-title" style="color:var(--charcoal)">ABOUT</h2>
+        <p>I'm Lokesh K, a Graphic Designer who turned a passion for creativity into a career. Coming from a Computer
+          Science background, I found my true calling in the world of visual design — crafting cinematic posters, bold
+          key visuals, and meaningful brand identities. I believe great design is not just seen — it's felt.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Photoshop</span>
+          <span class="skill-tag">Illustrator</span>
+          <span class="skill-tag">Poster Design</span>
+          <span class="skill-tag">Key Visual</span>
+          <span class="skill-tag">Typography</span>
+          <span class="skill-tag">Brand Identity</span>
+        </div>
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="40">0</div>
+            <div class="stat-label">Clients</div>
+          </div>
         </div>
       </div>
+      <div class="about-photo-wrap">
+        <img class="about-photo" src="Lokesh-K-profile-Picture.png" alt="Lokesh K" loading="lazy">
+      </div>
+    </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot active"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2024 — SEPTEMBER 2025</span>
-          <h3 class="timeline-role">Senior Graphic Designer</h3>
-          <p class="timeline-company">Pranada Media</p>
-          <p class="timeline-desc">Designed high-impact visual assets for film and media productions including cinematic posters, campaign graphics, and brand identity work.</p>
+    <!-- ── CLIENTS & COLLABORATIONS ── -->
+    <div class="clients-section reveal">
+      <div class="clients-header">
+        <span class="clients-rule"></span>
+        <h3 class="clients-heading">CLIENTS &amp; COLLABORATIONS</h3>
+        <span class="clients-rule"></span>
+      </div>
+
+      <div class="clients-track-wrapper">
+        <!-- fade masks -->
+        <div class="clients-fade clients-fade-left"></div>
+        <div class="clients-fade clients-fade-right"></div>
+
+        <div class="clients-track" id="clients-track">
+          <!-- Set A -->
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="jessy Paul Icon.jpg" alt="Jessy Paul" loading="lazy">
+            </div>
+            <span class="client-name">Jessy Paul</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="katrukathalu Icon.jpg" alt="Katrukathalu" loading="lazy">
+            </div>
+            <span class="client-name">Katrukathalu</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Life in Shorts Icon.jpg" alt="Life in Shorts" loading="lazy">
+            </div>
+            <span class="client-name">Life in Shorts</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Pallevindu Hyderabad Icon.jpg" alt="Pallevindu Hyderabad" loading="lazy">
+            </div>
+            <span class="client-name">Pallevindu Hyderabad</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Pondy Parottas Hyderabad Icon.jpg" alt="Pondy Parottas Hyderabad" loading="lazy">
+            </div>
+            <span class="client-name">Pondy Parottas Hyderabad</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Pranada Media Icon.jpg" alt="Pranada Media" loading="lazy">
+            </div>
+            <span class="client-name">Pranada Media</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="RajPrakashPaul Icon.jpg" alt="RajPrakash Paul" loading="lazy">
+            </div>
+            <span class="client-name">RajPrakash Paul</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="SandeepNadimpalli Icon.jpg" alt="Sandeep Nadimpalli" loading="lazy">
+            </div>
+            <span class="client-name">Sandeep Nadimpalli</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Toony Studios Icon.jpg" alt="Toony Studios" loading="lazy">
+            </div>
+            <span class="client-name">Toony Studios</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="VAASFamily Icon.jpg" alt="VAAS Family" loading="lazy">
+            </div>
+            <span class="client-name">VAAS Family</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="WhatKnotTelugu Icon.jpg" alt="WhatKnot Telugu" loading="lazy">
+            </div>
+            <span class="client-name">WhatKnot Telugu</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Funmoji Icon.jpg" alt="Funmoji" loading="lazy">
+            </div>
+            <span class="client-name">Funmoji</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Funmoji 2d Icon.jpg" alt="Funmoji 2D" loading="lazy">
+            </div>
+            <span class="client-name">Funmoji 2D</span>
+          </div>
+          <!-- Set B (duplicate for seamless loop) -->
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="jessy Paul Icon.jpg" alt="Jessy Paul" loading="lazy">
+            </div>
+            <span class="client-name">Jessy Paul</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="katrukathalu Icon.jpg" alt="Katrukathalu" loading="lazy">
+            </div>
+            <span class="client-name">Katrukathalu</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Life in Shorts Icon.jpg" alt="Life in Shorts" loading="lazy">
+            </div>
+            <span class="client-name">Life in Shorts</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Pallevindu Hyderabad Icon.jpg" alt="Pallevindu Hyderabad" loading="lazy">
+            </div>
+            <span class="client-name">Pallevindu Hyderabad</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Pondy Parottas Hyderabad Icon.jpg" alt="Pondy Parottas Hyderabad" loading="lazy">
+            </div>
+            <span class="client-name">Pondy Parottas Hyderabad</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Pranada Media Icon.jpg" alt="Pranada Media" loading="lazy">
+            </div>
+            <span class="client-name">Pranada Media</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="RajPrakashPaul Icon.jpg" alt="RajPrakash Paul" loading="lazy">
+            </div>
+            <span class="client-name">RajPrakash Paul</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="SandeepNadimpalli Icon.jpg" alt="Sandeep Nadimpalli" loading="lazy">
+            </div>
+            <span class="client-name">Sandeep Nadimpalli</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Toony Studios Icon.jpg" alt="Toony Studios" loading="lazy">
+            </div>
+            <span class="client-name">Toony Studios</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="VAASFamily Icon.jpg" alt="VAAS Family" loading="lazy">
+            </div>
+            <span class="client-name">VAAS Family</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="WhatKnotTelugu Icon.jpg" alt="WhatKnot Telugu" loading="lazy">
+            </div>
+            <span class="client-name">WhatKnot Telugu</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Funmoji Icon.jpg" alt="Funmoji" loading="lazy">
+            </div>
+            <span class="client-name">Funmoji</span>
+          </div>
+          <div class="client-card">
+            <div class="client-logo-wrap">
+              <img src="Funmoji 2d Icon.jpg" alt="Funmoji 2D" loading="lazy">
+            </div>
+            <span class="client-name">Funmoji 2D</span>
+          </div>
+        </div><!-- /clients-track -->
+      </div><!-- /clients-track-wrapper -->
+    </div><!-- /clients-section -->
+
+  </section>
+
+  <!-- ═══ CAREER / EXPERIENCE ═══ -->
+  <section id="career" class="section section-dark">
+    <div class="career-inner reveal">
+      <p class="career-label">CAREER</p>
+      <h2 class="career-heading">Experience</h2>
+      <div class="career-line-accent"></div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">SEPTEMBER 2025 — PRESENT</span>
+            <h3 class="timeline-role">Senior Graphic Designer</h3>
+            <p class="timeline-company">Toony Studios</p>
+            <p class="timeline-desc">Leading visual design for animated and creative studio projects, developing brand
+              assets, campaign materials, and art direction.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 — SEPTEMBER 2025</span>
+            <h3 class="timeline-role">Senior Graphic Designer</h3>
+            <p class="timeline-company">Pranada Media</p>
+            <p class="timeline-desc">Designed high-impact visual assets for film and media productions including
+              cinematic posters, campaign graphics, and brand identity work.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2020 — 2023</span>
+            <h3 class="timeline-role">Junior Graphic Designer</h3>
+            <p class="timeline-company">Freelance</p>
+            <p class="timeline-desc">Delivered branding, illustration, typography, and visual design work for a range of
+              clients across entertainment and commercial sectors.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WORK / PORTFOLIO ═══ -->
+  <section id="work" class="section section-dark">
+    <h2 class="section-title reveal">WORK</h2>
+
+    <!-- CINEMATIC POSTERS -->
+    <div class="layer-group reveal">
+      <div class="layer-group-header">
+        <span class="layer-arrow">▶</span>
+        <span class="layer-group-label">CINEMATIC POSTERS</span>
+        <span class="layer-count">21 layers</span>
+      </div>
+      <div class="layer-group-content">
+        <div class="layer-items">
+          <div class="layer-card"><img src="cinematic poster 21.jpg" alt="Cinematic Poster 21" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 21.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_21</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 20.jpg" alt="Cinematic Poster 20" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 20.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_20</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 19.jpg" alt="Cinematic Poster 19" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 19.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_19</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 18.jpg" alt="Cinematic Poster 18" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 18.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_18</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 17.jpg" alt="Cinematic Poster 17" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 17.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_17</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 16.jpg" alt="Cinematic Poster 16" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 16.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_16</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 15.jpg" alt="Cinematic Poster 15" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 15.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_15</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 14.jpg" alt="Cinematic Poster 14" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 14.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_14</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 13.png" alt="Cinematic Poster 13" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 13.png" alt=""></div><span
+                class="layer-card-name">cinematic_poster_13</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 12.png" alt="Cinematic Poster 12" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 12.png" alt=""></div><span
+                class="layer-card-name">cinematic_poster_12</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 11.png" alt="Cinematic Poster 11" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 11.png" alt=""></div><span
+                class="layer-card-name">cinematic_poster_11</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 10.jpg" alt="Cinematic Poster 10" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 10.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_10</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 9.jpg" alt="Cinematic Poster 9" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 9.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_09</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 8.jpg" alt="Cinematic Poster 8" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 8.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_08</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 7.jpg" alt="Cinematic Poster 7" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 7.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_07</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 6.jpg" alt="Cinematic Poster 6" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 6.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_06</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 5.png" alt="Cinematic Poster 5" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 5.png" alt=""></div><span
+                class="layer-card-name">cinematic_poster_05</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 4.jpg" alt="Cinematic Poster 4" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 4.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_04</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 3.jpg" alt="Cinematic Poster 3" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 3.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_03</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 2.jpg" alt="Cinematic Poster 2" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 2.jpg" alt=""></div><span
+                class="layer-card-name">cinematic_poster_02</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="cinematic poster 1.png" alt="Cinematic Poster 1" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="cinematic poster 1.png" alt=""></div><span
+                class="layer-card-name">cinematic_poster_01</span>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2020 — 2023</span>
-          <h3 class="timeline-role">Junior Graphic Designer</h3>
-          <p class="timeline-company">Freelance</p>
-          <p class="timeline-desc">Delivered branding, illustration, typography, and visual design work for a range of clients across entertainment and commercial sectors.</p>
+    <!-- ILLUSTRATIONS -->
+    <div class="layer-group reveal">
+      <div class="layer-group-header">
+        <span class="layer-arrow">▶</span>
+        <span class="layer-group-label">ILLUSTRATIONS</span>
+        <span class="layer-count">14 layers</span>
+      </div>
+      <div class="layer-group-content">
+        <div class="layer-items">
+          <div class="layer-card"><img src="illustations 1.png" alt="Illustration 1" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 1.png" alt=""></div><span
+                class="layer-card-name">illustration_01</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 2.png" alt="Illustration 2" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 2.png" alt=""></div><span
+                class="layer-card-name">illustration_02</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 3.png" alt="Illustration 3" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 3.png" alt=""></div><span
+                class="layer-card-name">illustration_03</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 4.png" alt="Illustration 4" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 4.png" alt=""></div><span
+                class="layer-card-name">illustration_04</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 5.png" alt="Illustration 5" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 5.png" alt=""></div><span
+                class="layer-card-name">illustration_05</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 6.jpg" alt="Illustration 6" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 6.jpg" alt=""></div><span
+                class="layer-card-name">illustration_06</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 7.png" alt="Illustration 7" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 7.png" alt=""></div><span
+                class="layer-card-name">illustration_07</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 8.png" alt="Illustration 8" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 8.png" alt=""></div><span
+                class="layer-card-name">illustration_08</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 9.png" alt="Illustration 9" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 9.png" alt=""></div><span
+                class="layer-card-name">illustration_09</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 10.jpg" alt="Illustration 10" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 10.jpg" alt=""></div><span
+                class="layer-card-name">illustration_10</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 11.jpg" alt="Illustration 11" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 11.jpg" alt=""></div><span
+                class="layer-card-name">illustration_11</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 12.jpg" alt="Illustration 12" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 12.jpg" alt=""></div><span
+                class="layer-card-name">illustration_12</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 13.jpg" alt="Illustration 13" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 13.jpg" alt=""></div><span
+                class="layer-card-name">illustration_13</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="illustations 14.jpg" alt="Illustration 14" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="illustations 14.jpg" alt=""></div><span
+                class="layer-card-name">illustration_14</span>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
 
-<!-- ═══ WORK / PORTFOLIO ═══ -->
-<section id="work" class="section section-dark">
-  <h2 class="section-title reveal">WORK</h2>
-
-  <!-- CINEMATIC POSTERS -->
-  <div class="layer-group reveal">
-    <div class="layer-group-header">
-      <span class="layer-arrow">▶</span>
-      <span class="layer-group-label">CINEMATIC POSTERS</span>
-      <span class="layer-count">15 layers</span>
-    </div>
-    <div class="layer-group-content">
-      <div class="layer-items">
-        <div class="layer-card"><img src="cinematic poster 1.png" alt="Cinematic Poster 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 1.png" alt=""></div><span class="layer-card-name">cinematic_poster_01</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 2.jpg" alt="Cinematic Poster 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 2.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_02</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 3.jpg" alt="Cinematic Poster 3" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 3.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_03</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 4.jpg" alt="Cinematic Poster 4" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 4.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_04</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 5.png" alt="Cinematic Poster 5" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 5.png" alt=""></div><span class="layer-card-name">cinematic_poster_05</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 6.jpg" alt="Cinematic Poster 6" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 6.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_06</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 7.jpg" alt="Cinematic Poster 7" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 7.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_07</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 8.jpg" alt="Cinematic Poster 8" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 8.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_08</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 9.jpg" alt="Cinematic Poster 9" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 9.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_09</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 10.jpg" alt="Cinematic Poster 10" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 10.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_10</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 11.png" alt="Cinematic Poster 11" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 11.png" alt=""></div><span class="layer-card-name">cinematic_poster_11</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 12.png" alt="Cinematic Poster 12" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 12.png" alt=""></div><span class="layer-card-name">cinematic_poster_12</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 13.png" alt="Cinematic Poster 13" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 13.png" alt=""></div><span class="layer-card-name">cinematic_poster_13</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 14.jpg" alt="Cinematic Poster 14" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 14.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_14</span></div></div>
-        <div class="layer-card"><img src="cinematic poster 15.jpg" alt="Cinematic Poster 15" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="cinematic poster 15.jpg" alt=""></div><span class="layer-card-name">cinematic_poster_15</span></div></div>
+    <!-- COMMERCIAL POSTERS -->
+    <div class="layer-group reveal">
+      <div class="layer-group-header">
+        <span class="layer-arrow">▶</span>
+        <span class="layer-group-label">COMMERCIAL POSTERS</span>
+        <span class="layer-count">4 layers</span>
+      </div>
+      <div class="layer-group-content">
+        <div class="layer-items">
+          <div class="layer-card"><img src="COMERICIAL 1.png" alt="Commercial Poster 1" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="COMERICIAL 1.png" alt=""></div><span
+                class="layer-card-name">commercial_poster_01</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="COMERICIAL 2.png" alt="Commercial Poster 2" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="COMERICIAL 2.png" alt=""></div><span
+                class="layer-card-name">commercial_poster_02</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="COMERICIAL 3.webp" alt="Commercial Poster 3" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="COMERICIAL 3.webp" alt=""></div><span
+                class="layer-card-name">commercial_poster_03</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="COMERICIAL 4.webp" alt="Commercial Poster 4" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="COMERICIAL 4.webp" alt=""></div><span
+                class="layer-card-name">commercial_poster_04</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ILLUSTRATIONS -->
-  <div class="layer-group reveal">
-    <div class="layer-group-header">
-      <span class="layer-arrow">▶</span>
-      <span class="layer-group-label">ILLUSTRATIONS</span>
-      <span class="layer-count">14 layers</span>
-    </div>
-    <div class="layer-group-content">
-      <div class="layer-items">
-        <div class="layer-card"><img src="illustations 1.png" alt="Illustration 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 1.png" alt=""></div><span class="layer-card-name">illustration_01</span></div></div>
-        <div class="layer-card"><img src="illustations 2.png" alt="Illustration 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 2.png" alt=""></div><span class="layer-card-name">illustration_02</span></div></div>
-        <div class="layer-card"><img src="illustations 3.png" alt="Illustration 3" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 3.png" alt=""></div><span class="layer-card-name">illustration_03</span></div></div>
-        <div class="layer-card"><img src="illustations 4.png" alt="Illustration 4" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 4.png" alt=""></div><span class="layer-card-name">illustration_04</span></div></div>
-        <div class="layer-card"><img src="illustations 5.png" alt="Illustration 5" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 5.png" alt=""></div><span class="layer-card-name">illustration_05</span></div></div>
-        <div class="layer-card"><img src="illustations 6.jpg" alt="Illustration 6" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 6.jpg" alt=""></div><span class="layer-card-name">illustration_06</span></div></div>
-        <div class="layer-card"><img src="illustations 7.png" alt="Illustration 7" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 7.png" alt=""></div><span class="layer-card-name">illustration_07</span></div></div>
-        <div class="layer-card"><img src="illustations 8.png" alt="Illustration 8" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 8.png" alt=""></div><span class="layer-card-name">illustration_08</span></div></div>
-        <div class="layer-card"><img src="illustations 9.png" alt="Illustration 9" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 9.png" alt=""></div><span class="layer-card-name">illustration_09</span></div></div>
-        <div class="layer-card"><img src="illustations 10.jpg" alt="Illustration 10" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 10.jpg" alt=""></div><span class="layer-card-name">illustration_10</span></div></div>
-        <div class="layer-card"><img src="illustations 11.jpg" alt="Illustration 11" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 11.jpg" alt=""></div><span class="layer-card-name">illustration_11</span></div></div>
-        <div class="layer-card"><img src="illustations 12.jpg" alt="Illustration 12" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 12.jpg" alt=""></div><span class="layer-card-name">illustration_12</span></div></div>
-        <div class="layer-card"><img src="illustations 13.jpg" alt="Illustration 13" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 13.jpg" alt=""></div><span class="layer-card-name">illustration_13</span></div></div>
-        <div class="layer-card"><img src="illustations 14.jpg" alt="Illustration 14" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="illustations 14.jpg" alt=""></div><span class="layer-card-name">illustration_14</span></div></div>
+    <!-- LOGO DESIGNS -->
+    <div class="layer-group reveal">
+      <div class="layer-group-header">
+        <span class="layer-arrow">▶</span>
+        <span class="layer-group-label">LOGO DESIGNS</span>
+        <span class="layer-count">2 layers</span>
+      </div>
+      <div class="layer-group-content">
+        <div class="layer-items">
+          <div class="layer-card"><img src="logo 1.png" alt="Logo Design 1" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="logo 1.png" alt=""></div><span
+                class="layer-card-name">logo_design_01</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="logo 2.png" alt="Logo Design 2" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="logo 2.png" alt=""></div><span
+                class="layer-card-name">logo_design_02</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- COMMERCIAL POSTERS -->
-  <div class="layer-group reveal">
-    <div class="layer-group-header">
-      <span class="layer-arrow">▶</span>
-      <span class="layer-group-label">COMMERCIAL POSTERS</span>
-      <span class="layer-count">4 layers</span>
-    </div>
-    <div class="layer-group-content">
-      <div class="layer-items">
-        <div class="layer-card"><img src="COMERICIAL 1.png" alt="Commercial Poster 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="COMERICIAL 1.png" alt=""></div><span class="layer-card-name">commercial_poster_01</span></div></div>
-        <div class="layer-card"><img src="COMERICIAL 2.png" alt="Commercial Poster 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="COMERICIAL 2.png" alt=""></div><span class="layer-card-name">commercial_poster_02</span></div></div>
-        <div class="layer-card"><img src="COMERICIAL 3.webp" alt="Commercial Poster 3" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="COMERICIAL 3.webp" alt=""></div><span class="layer-card-name">commercial_poster_03</span></div></div>
-        <div class="layer-card"><img src="COMERICIAL 4.webp" alt="Commercial Poster 4" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="COMERICIAL 4.webp" alt=""></div><span class="layer-card-name">commercial_poster_04</span></div></div>
+    <!-- TYPOGRAPHY -->
+    <div class="layer-group reveal">
+      <div class="layer-group-header">
+        <span class="layer-arrow">▶</span>
+        <span class="layer-group-label">TYPOGRAPHY</span>
+        <span class="layer-count">4 layers</span>
+      </div>
+      <div class="layer-group-content">
+        <div class="layer-items">
+          <div class="layer-card"><img src="typograhy 1.jpg" alt="Typography 1" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="typograhy 1.jpg" alt=""></div><span
+                class="layer-card-name">typography_01</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="typograhy 2.jpg" alt="Typography 2" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="typograhy 2.jpg" alt=""></div><span
+                class="layer-card-name">typography_02</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="typograhy 3.jpg" alt="Typography 3" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="typograhy 3.jpg" alt=""></div><span
+                class="layer-card-name">typography_03</span>
+            </div>
+          </div>
+          <div class="layer-card"><img src="typograhy 4.jpg" alt="Typography 4" loading="lazy">
+            <div class="layer-card-info">
+              <div class="layer-thumb-icon"><img src="typograhy 4.jpg" alt=""></div><span
+                class="layer-card-name">typography_04</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- LOGO DESIGNS -->
-  <div class="layer-group reveal">
-    <div class="layer-group-header">
-      <span class="layer-arrow">▶</span>
-      <span class="layer-group-label">LOGO DESIGNS</span>
-      <span class="layer-count">2 layers</span>
+  <!-- ═══ CLOSING MESSAGE ═══ -->
+  <section id="closing" class="section section-light">
+    <div class="reveal">
+      <p class="closing-quote">"Every great design begins with a story worth telling.<br>Thank you for visiting — I hope
+        my work speaks to you."</p>
+      <p class="closing-author">— LOKESH K</p>
+      <img class="closing-sig" src="Lokesh K Signature.png" alt="Lokesh K Signature">
     </div>
-    <div class="layer-group-content">
-      <div class="layer-items">
-        <div class="layer-card"><img src="logo 1.png" alt="Logo Design 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="logo 1.png" alt=""></div><span class="layer-card-name">logo_design_01</span></div></div>
-        <div class="layer-card"><img src="logo 2.png" alt="Logo Design 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="logo 2.png" alt=""></div><span class="layer-card-name">logo_design_02</span></div></div>
-      </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section section-dark">
+    <div class="contact-inner reveal">
+      <h2 class="section-title">LET'S CONNECT</h2>
+      <p class="contact-subtitle">Have a project in mind? Drop me a message.</p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">SEND MESSAGE</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
     </div>
-  </div>
+  </section>
 
-  <!-- TYPOGRAPHY -->
-  <div class="layer-group reveal">
-    <div class="layer-group-header">
-      <span class="layer-arrow">▶</span>
-      <span class="layer-group-label">TYPOGRAPHY</span>
-      <span class="layer-count">4 layers</span>
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer" class="section-dark">
+    <div class="social-links">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/lokeshk79/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg>
+      </a>
+      <!-- Behance -->
+      <a href="https://www.behance.net/Lokesh_k" target="_blank" rel="noopener" aria-label="Behance">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M7.5 11c1.38 0 2.5-.56 2.5-2.12S8.88 6.5 7.5 6.5H3v9h4.5c1.62 0 3-.75 3-2.62S9.12 11 7.5 11zM5 8h2.25c.69 0 1.25.31 1.25 1s-.56 1-1.25 1H5V8zm2.5 6H5v-2.5h2.5c.81 0 1.5.38 1.5 1.25S8.31 14 7.5 14zM15 7.5c-2.49 0-4.5 1.79-4.5 4.5s2.01 4.5 4.5 4.5c1.93 0 3.28-.79 4.04-2.5h-2.14c-.28.5-.97.88-1.9.88-1.38 0-2.25-.81-2.38-2h6.5c.05-.33.07-.57.07-.88 0-2.71-2.01-4.5-4.5-4.5h.31zm-2.19 3.5c.25-1 1.06-1.62 2.19-1.62s1.94.63 2.19 1.62h-4.38zM14 5h5v1.5h-5V5z" />
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/sun_nylokesh/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z" />
+        </svg>
+      </a>
     </div>
-    <div class="layer-group-content">
-      <div class="layer-items">
-        <div class="layer-card"><img src="typograhy 1.jpg" alt="Typography 1" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="typograhy 1.jpg" alt=""></div><span class="layer-card-name">typography_01</span></div></div>
-        <div class="layer-card"><img src="typograhy 2.jpg" alt="Typography 2" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="typograhy 2.jpg" alt=""></div><span class="layer-card-name">typography_02</span></div></div>
-        <div class="layer-card"><img src="typograhy 3.jpg" alt="Typography 3" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="typograhy 3.jpg" alt=""></div><span class="layer-card-name">typography_03</span></div></div>
-        <div class="layer-card"><img src="typograhy 4.jpg" alt="Typography 4" loading="lazy"><div class="layer-card-info"><div class="layer-thumb-icon"><img src="typograhy 4.jpg" alt=""></div><span class="layer-card-name">typography_04</span></div></div>
-      </div>
-    </div>
+    <p class="footer-copy">© 2025 Lokesh K. Designed with passion. All rights reserved.</p>
+  </footer>
+
+  <!-- ═══ LIGHTBOX ═══ -->
+  <div id="lightbox">
+    <img id="lb-img" src="" alt="Portfolio view">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
   </div>
-</section>
 
-<!-- ═══ CLOSING MESSAGE ═══ -->
-<section id="closing" class="section section-light">
-  <div class="reveal">
-    <p class="closing-quote">"Every great design begins with a story worth telling.<br>Thank you for visiting — I hope my work speaks to you."</p>
-    <p class="closing-author">— LOKESH K</p>
-    <img class="closing-sig" src="Lokesh K Signature.png" alt="Lokesh K Signature">
-  </div>
-</section>
-
-<!-- ═══ CONTACT ═══ -->
-<section id="contact" class="section section-dark">
-  <div class="contact-inner reveal">
-    <h2 class="section-title">LET'S CONNECT</h2>
-    <p class="contact-subtitle">Have a project in mind? Drop me a message.</p>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="form-submit">SEND MESSAGE</button>
-      <p id="form-status" class="form-status"></p>
-    </form>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer id="footer" class="section-dark">
-  <div class="social-links">
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/lokeshk79/" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-    </a>
-    <!-- Behance -->
-    <a href="https://www.behance.net/Lokesh_k" target="_blank" rel="noopener" aria-label="Behance">
-      <svg viewBox="0 0 24 24"><path d="M7.5 11c1.38 0 2.5-.56 2.5-2.12S8.88 6.5 7.5 6.5H3v9h4.5c1.62 0 3-.75 3-2.62S9.12 11 7.5 11zM5 8h2.25c.69 0 1.25.31 1.25 1s-.56 1-1.25 1H5V8zm2.5 6H5v-2.5h2.5c.81 0 1.5.38 1.5 1.25S8.31 14 7.5 14zM15 7.5c-2.49 0-4.5 1.79-4.5 4.5s2.01 4.5 4.5 4.5c1.93 0 3.28-.79 4.04-2.5h-2.14c-.28.5-.97.88-1.9.88-1.38 0-2.25-.81-2.38-2h6.5c.05-.33.07-.57.07-.88 0-2.71-2.01-4.5-4.5-4.5h.31zm-2.19 3.5c.25-1 1.06-1.62 2.19-1.62s1.94.63 2.19 1.62h-4.38zM14 5h5v1.5h-5V5z"/></svg>
-    </a>
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/sun_nylokesh/" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
-    </a>
-  </div>
-  <p class="footer-copy">© 2025 Lokesh K. Designed with passion. All rights reserved.</p>
-</footer>
-
-<!-- ═══ LIGHTBOX ═══ -->
-<div id="lightbox">
-  <img id="lb-img" src="" alt="Portfolio view">
-  <button class="lb-close" aria-label="Close">✕</button>
-  <button class="lb-prev" aria-label="Previous">‹</button>
-  <button class="lb-next" aria-label="Next">›</button>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

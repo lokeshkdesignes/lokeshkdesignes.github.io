@@ -293,4 +293,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
+  /* ═══ CLIENTS CENTRE-FOCUS DEPTH EFFECT ═══ */
+  (function initClientsFocus() {
+    const wrapper = document.querySelector('.clients-track-wrapper');
+    const track   = document.getElementById('clients-track');
+    if (!wrapper || !track) return;
+
+    // Use only the FIRST half of the cards (set A) for position checks
+    // because set B is an identical clone for the loop
+    const allCards = Array.from(track.querySelectorAll('.client-card'));
+    const halfCount = allCards.length / 2;
+    // We query all cards and update them all (both sets A & B) for visual consistency
+    const cards = allCards;
+
+    // Threshold: cards whose centre is within this many px of the wrapper centre get focus-near
+    const FOCUS_ZONE = 180; // px
+
+    let rafId = null;
+
+    function updateFocus() {
+      const wRect    = wrapper.getBoundingClientRect();
+      const wCentreX = wRect.left + wRect.width / 2;
+
+      cards.forEach(card => {
+        const cRect    = card.getBoundingClientRect();
+        const cCentreX = cRect.left + cRect.width / 2;
+        const dist     = Math.abs(cCentreX - wCentreX);
+        card.classList.toggle('focus-near', dist < FOCUS_ZONE);
+      });
+
+      rafId = requestAnimationFrame(updateFocus);
+    }
+
+    // Start loop when wrapper is visible
+    const focusObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!rafId) rafId = requestAnimationFrame(updateFocus);
+        } else {
+          if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        }
+      });
+    }, { threshold: 0 });
+
+    focusObs.observe(wrapper);
+  })();
+
 });
