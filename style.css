@@ -938,13 +938,6 @@ body.light-section #cursor-main svg path {
 
 /* ═══ CLIENTS & COLLABORATIONS ═══ */
 
-/* Total width of one set = 13 cards × (card-width + gap) */
-/* card = 120px logo + 2×0 padding, gap = 32px => 148px per card for 13 cards = 1924px */
-@keyframes clientsScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
 .clients-section {
   margin-top: 72px;
   padding: 0 0 0 0;
@@ -1004,19 +997,32 @@ body.light-section #cursor-main svg path {
   background: linear-gradient(to left, #ffffff 0%, transparent 100%);
 }
 
-/* The moving strip */
+/* The moving strip – animation is driven entirely by JS */
 .clients-track {
   display: flex;
   align-items: flex-start;
   gap: 32px;
   width: max-content;
-  animation: clientsScroll 36s linear infinite;
   will-change: transform;
+  /* translateX is set by JS; no CSS animation here */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-/* Pause on hover of the whole wrapper */
-.clients-track-wrapper:hover .clients-track {
-  animation-play-state: paused;
+/* Cursor states for drag interaction */
+.clients-track-wrapper {
+  cursor: grab;
+}
+
+.clients-track-wrapper.is-dragging {
+  cursor: grabbing;
+}
+
+/* Prevent images from triggering drag events */
+.clients-track img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 /* ── Individual client card ── */
@@ -1027,7 +1033,7 @@ body.light-section #cursor-main svg path {
   gap: 14px;
   width: 120px;
   flex-shrink: 0;
-  cursor: default;
+  cursor: inherit; /* inherits grab/grabbing from wrapper */
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 

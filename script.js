@@ -293,50 +293,214 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  /* ═══ CLIENTS CENTRE-FOCUS DEPTH EFFECT ═══ */
-  (function initClientsFocus() {
+  /* ═══ CLIENTS CAROUSEL — INTERACTIVE ENGINE ═══ */
+  (function initClientsCarousel() {
     const wrapper = document.querySelector('.clients-track-wrapper');
     const track   = document.getElementById('clients-track');
     if (!wrapper || !track) return;
 
-    // Use only the FIRST half of the cards (set A) for position checks
-    // because set B is an identical clone for the loop
-    const allCards = Array.from(track.querySelectorAll('.client-card'));
-    const halfCount = allCards.length / 2;
-    // We query all cards and update them all (both sets A & B) for visual consistency
-    const cards = allCards;
+    const cards = Array.from(track.querySelectorAll('.client-card'));
 
-    // Threshold: cards whose centre is within this many px of the wrapper centre get focus-near
-    const FOCUS_ZONE = 180; // px
+    /* ── Constants ── */
+    const AUTO_SPEED      = 0.55;   // px/frame auto-scroll speed
+    const RESUME_DELAY    = 2500;   // ms before auto-scroll resumes after interaction
+    const FOCUS_ZONE      = 180;    // px from wrapper centre for focus-near class
+    const MOMENTUM_DECAY  = 0.92;   // friction factor per frame (0–1)
+    const WHEEL_FACTOR    = 0.8;    // wheel delta multiplier
+    const MIN_VELOCITY    = 0.05;   // velocity below which momentum stops
 
-    let rafId = null;
+    /* ── State ── */
+    let offset        = 0;          // current translateX (negative = moved left)
+    let halfWidth     = 0;          // width of one set of cards (for seamless loop)
+    let velocity      = 0;          // current momentum velocity (px/frame)
+    let isDragging    = false;
+    let dragStartX    = 0;
+    let dragLastX     = 0;
+    let dragVelocity  = 0;
+    let autoScroll    = true;
+    let resumeTimer   = null;
+    let rafId         = null;
+    let isVisible     = false;
 
+    /* ── Measure the scrollable half-width ── */
+    function measureHalfWidth() {
+      // Sum up widths + gaps of the first half of cards (Set A)
+      const half = Math.floor(cards.length / 2);
+      const gap  = 32; // matches CSS gap
+      let w = 0;
+      for (let i = 0; i < half; i++) {
+        w += cards[i].getBoundingClientRect().width;
+      }
+      w += gap * (half); // gap after each card including trailing
+      halfWidth = w;
+    }
+
+    /* ── Apply transform ── */
+    function applyOffset() {
+      track.style.transform = `translateX(${offset}px)`;
+    }
+
+    /* ── Seamless loop: wrap offset when it exceeds half-width ── */
+    function wrapOffset() {
+      if (halfWidth === 0) return;
+      // Scrolling left: once we've scrolled a full set, reset
+      if (offset <= -halfWidth) {
+        offset += halfWidth;
+      }
+      // Scrolling right: if user drags right past 0, wrap to the other end
+      if (offset > 0) {
+        offset -= halfWidth;
+      }
+    }
+
+    /* ── Centre-focus depth effect ── */
     function updateFocus() {
       const wRect    = wrapper.getBoundingClientRect();
       const wCentreX = wRect.left + wRect.width / 2;
-
       cards.forEach(card => {
         const cRect    = card.getBoundingClientRect();
         const cCentreX = cRect.left + cRect.width / 2;
-        const dist     = Math.abs(cCentreX - wCentreX);
-        card.classList.toggle('focus-near', dist < FOCUS_ZONE);
+        card.classList.toggle('focus-near', Math.abs(cCentreX - wCentreX) < FOCUS_ZONE);
       });
-
-      rafId = requestAnimationFrame(updateFocus);
     }
 
-    // Start loop when wrapper is visible
-    const focusObs = new IntersectionObserver(entries => {
+    /* ── Main animation loop ── */
+    function tick() {
+      if (!isVisible) { rafId = null; return; }
+      rafId = requestAnimationFrame(tick);
+
+      if (isDragging) {
+        // During drag: position is set directly by pointer events; just update focus
+        updateFocus();
+        return;
+      }
+
+      if (autoScroll) {
+        // Auto-scroll: constant leftward drift
+        offset -= AUTO_SPEED;
+      } else if (Math.abs(velocity) > MIN_VELOCITY) {
+        // Momentum / inertia scrolling
+        offset += velocity;
+        velocity *= MOMENTUM_DECAY;
+      }
+
+      wrapOffset();
+      applyOffset();
+      updateFocus();
+    }
+
+    /* ── Pause / resume helpers ── */
+    function pauseAuto() {
+      autoScroll = false;
+      clearTimeout(resumeTimer);
+    }
+
+    function scheduleResume() {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        velocity   = 0;
+        autoScroll = true;
+      }, RESUME_DELAY);
+    }
+
+    /* ── Mouse drag ── */
+    wrapper.addEventListener('mousedown', e => {
+      if (e.button !== 0) return;
+      isDragging = true;
+      dragStartX = e.clientX;
+      dragLastX  = e.clientX;
+      dragVelocity = 0;
+      velocity     = 0;
+      pauseAuto();
+      wrapper.classList.add('is-dragging');
+      e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      const dx   = e.clientX - dragLastX;
+      dragVelocity = dx;            // track velocity for momentum release
+      offset      += dx;
+      dragLastX    = e.clientX;
+      wrapOffset();
+      applyOffset();
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      wrapper.classList.remove('is-dragging');
+      // Hand off velocity to momentum engine
+      velocity = dragVelocity;
+      scheduleResume();
+    });
+
+    /* ── Mouse wheel ── */
+    wrapper.addEventListener('wheel', e => {
+      // Treat any wheel event over the wrapper as horizontal scroll
+      e.preventDefault();
+      pauseAuto();
+      const delta = (e.deltaX !== 0 ? e.deltaX : e.deltaY) * WHEEL_FACTOR;
+      velocity = delta * 0.5;
+      offset  -= delta;
+      wrapOffset();
+      applyOffset();
+      scheduleResume();
+    }, { passive: false });
+
+    /* ── Touch / swipe ── */
+    let touchStartX  = 0;
+    let touchLastX   = 0;
+    let touchVelocity = 0;
+
+    wrapper.addEventListener('touchstart', e => {
+      touchStartX   = e.touches[0].clientX;
+      touchLastX    = touchStartX;
+      touchVelocity = 0;
+      velocity      = 0;
+      pauseAuto();
+    }, { passive: true });
+
+    wrapper.addEventListener('touchmove', e => {
+      const x  = e.touches[0].clientX;
+      const dx = x - touchLastX;
+      // Only hijack horizontal swipes to avoid blocking page scroll
+      const dy = Math.abs(e.touches[0].clientY - (e.changedTouches[0]?.clientY || 0));
+      touchVelocity = dx;
+      offset       += dx;
+      touchLastX    = x;
+      wrapOffset();
+      applyOffset();
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', () => {
+      velocity = touchVelocity;
+      scheduleResume();
+    }, { passive: true });
+
+    /* ── IntersectionObserver: only run when visible ── */
+    const visObs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (!rafId) rafId = requestAnimationFrame(updateFocus);
-        } else {
-          if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        isVisible = entry.isIntersecting;
+        if (isVisible && !rafId) {
+          measureHalfWidth();
+          rafId = requestAnimationFrame(tick);
         }
       });
     }, { threshold: 0 });
 
-    focusObs.observe(wrapper);
+    visObs.observe(wrapper);
+
+    /* ── Re-measure on resize ── */
+    window.addEventListener('resize', () => {
+      measureHalfWidth();
+      wrapOffset();
+    }, { passive: true });
+
+    /* ── Initial measurement (after fonts / images settle) ── */
+    window.addEventListener('load', () => {
+      measureHalfWidth();
+    });
   })();
 
 });
