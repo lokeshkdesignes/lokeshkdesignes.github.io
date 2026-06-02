@@ -85,6 +85,7 @@ body.light-section #cursor-main svg path {
     background-position: 0 20px;
     opacity: 0;
   }
+
   to {
     background-position: 0 0;
     opacity: 1;
@@ -1033,12 +1034,29 @@ body.light-section #cursor-main svg path {
   gap: 14px;
   width: 120px;
   flex-shrink: 0;
-  cursor: inherit; /* inherits grab/grabbing from wrapper */
+  cursor: inherit;
+  /* inherits grab/grabbing from wrapper */
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* anchor reset — keep visual style identical to previous div */
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.client-card:focus-visible {
+  outline: 2px solid rgba(28, 28, 30, 0.5);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .client-card:hover {
-  transform: scale(1.08) translateY(-4px);
+  transform: scale(1.06) translateY(-3px);
+}
+
+/* Guard class: block accidental click navigation while dragging */
+.client-card.no-click {
+  pointer-events: none;
 }
 
 /* The circular logo container */
@@ -1060,9 +1078,9 @@ body.light-section #cursor-main svg path {
 
 .client-card:hover .client-logo-wrap {
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.10),
-    0 2px 8px rgba(0, 0, 0, 0.07);
-  border-color: rgba(28, 28, 30, 0.18);
+    0 10px 32px rgba(0, 0, 0, 0.13),
+    0 2px 8px rgba(0, 0, 0, 0.08);
+  border-color: rgba(28, 28, 30, 0.22);
 }
 
 .client-logo-wrap img {
@@ -1072,24 +1090,32 @@ body.light-section #cursor-main svg path {
   border-radius: 50%;
   display: block;
   transition:
-    filter 0.5s ease,
-    opacity 0.5s ease,
-    transform 0.5s ease;
+    filter 0.45s ease,
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    brightness 0.45s ease;
 }
 
 /* ── Centre-focus depth effect via JS class ── */
 /* Default: cards away from centre are slightly soft and dimmed */
 .client-card .client-logo-wrap img {
-  filter: blur(0.6px) grayscale(12%);
+  filter: blur(0.6px) grayscale(12%) brightness(0.9);
   opacity: 0.72;
   transform: scale(0.93);
 }
 
 /* Cards near centre become crisp, bright, slightly larger */
 .client-card.focus-near .client-logo-wrap img {
-  filter: blur(0px) grayscale(0%);
+  filter: blur(0px) grayscale(0%) brightness(1);
   opacity: 1;
   transform: scale(1);
+}
+
+/* Premium hover: subtle brightness lift on top of whatever state the card is in */
+.client-card:hover .client-logo-wrap img {
+  filter: blur(0px) grayscale(0%) brightness(1.06);
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 /* Client name */

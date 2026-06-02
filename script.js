@@ -404,12 +404,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ── Mouse drag ── */
+    let dragMoved = false;  // did the pointer travel enough to count as a drag?
+    const DRAG_THRESHOLD = 5; // px — below this is treated as a click
+
     wrapper.addEventListener('mousedown', e => {
       if (e.button !== 0) return;
       isDragging = true;
       dragStartX = e.clientX;
       dragLastX  = e.clientX;
       dragVelocity = 0;
+      dragMoved    = false;
       velocity     = 0;
       pauseAuto();
       wrapper.classList.add('is-dragging');
@@ -422,6 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dragVelocity = dx;            // track velocity for momentum release
       offset      += dx;
       dragLastX    = e.clientX;
+      if (Math.abs(e.clientX - dragStartX) > DRAG_THRESHOLD) dragMoved = true;
       wrapOffset();
       applyOffset();
     });
@@ -430,6 +435,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isDragging) return;
       isDragging = false;
       wrapper.classList.remove('is-dragging');
+      // If the user dragged enough, briefly disable pointer-events on cards
+      // so the synthetic click after mouseup doesn't trigger navigation
+      if (dragMoved) {
+        cards.forEach(c => c.classList.add('no-click'));
+        requestAnimationFrame(() => cards.forEach(c => c.classList.remove('no-click')));
+      }
       // Hand off velocity to momentum engine
       velocity = dragVelocity;
       scheduleResume();
@@ -452,11 +463,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let touchStartX  = 0;
     let touchLastX   = 0;
     let touchVelocity = 0;
+    let touchMoved    = false;
 
     wrapper.addEventListener('touchstart', e => {
       touchStartX   = e.touches[0].clientX;
       touchLastX    = touchStartX;
       touchVelocity = 0;
+      touchMoved    = false;
       velocity      = 0;
       pauseAuto();
     }, { passive: true });
@@ -464,16 +477,19 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.addEventListener('touchmove', e => {
       const x  = e.touches[0].clientX;
       const dx = x - touchLastX;
-      // Only hijack horizontal swipes to avoid blocking page scroll
-      const dy = Math.abs(e.touches[0].clientY - (e.changedTouches[0]?.clientY || 0));
       touchVelocity = dx;
       offset       += dx;
       touchLastX    = x;
+      if (Math.abs(x - touchStartX) > DRAG_THRESHOLD) touchMoved = true;
       wrapOffset();
       applyOffset();
     }, { passive: true });
 
     wrapper.addEventListener('touchend', () => {
+      if (touchMoved) {
+        cards.forEach(c => c.classList.add('no-click'));
+        requestAnimationFrame(() => cards.forEach(c => c.classList.remove('no-click')));
+      }
       velocity = touchVelocity;
       scheduleResume();
     }, { passive: true });
