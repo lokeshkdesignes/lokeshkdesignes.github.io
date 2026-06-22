@@ -32,6 +32,545 @@
     contact: `You can reach Lokesh K through:\n• Contact Form — fill in the form in the Contact section of this page\n• LinkedIn — linkedin.com/in/lokeshk79\n• Behance — behance.net/Lokesh_k\n• Instagram — instagram.com/sun_nylokesh`,
 
     who: `Lokesh K is a Graphic Designer & Key Visual Artist specialising in cinematic poster design, publicity design, brand identity, illustration, and typography. He has 4+ years of experience, has worked on 100+ projects, and collaborated with 40+ clients — mostly in the Telugu entertainment and media industry. He currently serves as Senior Graphic Designer at Toony Studios.`,
+
+    /* ════════════════════════════════════════════════════
+       PROJECT_CASE_STUDIES — Permanent Knowledge Section
+       Index of registered project case studies.
+       Each entry is keyed by case study number and maps
+       to its portfolio identifier (image file reference).
+    ════════════════════════════════════════════════════ */
+    PROJECT_CASE_STUDIES: {
+      _index: [
+        'CS-001 — Cinematic Poster 21 (cinematic_poster_21)',
+        'CS-002 — Cinematic Poster 20 (cinematic_poster_20)',
+        'CS-003 — Cinematic Poster 19 (cinematic_poster_19)',
+        'CS-004 — Cinematic Poster 18 (cinematic_poster_18) [COMPLETE ✓]',
+        'CS-005 — Cinematic Poster 17 (cinematic_poster_17) [COMPLETE ✓]',
+        'CS-006 — Cinematic Poster 16 (cinematic_poster_16) [COMPLETE ✓]',
+        'CS-007 — Cinematic Poster 15 (cinematic_poster_15) [COMPLETE ✓]',
+        'CS-008 — Cinematic Poster 14 (cinematic_poster_14) [COMPLETE ✓]',
+        'CS-009 — Cinematic Poster 13 (cinematic_poster_13) [COMPLETE ✓]',
+      ],
+      'CS-001': {
+        id: 'CS-001',
+        title: 'Cinematic Poster 21',
+        ref: 'cinematic_poster_21',
+        file: 'cinematic poster 21.jpg',
+        category: 'Cinematic Posters',
+        registered: '2026-06-09',
+      },
+      'CS-002': {
+        id: 'CS-002',
+        title: 'Cinematic Poster 20',
+        ref: 'cinematic_poster_20',
+        file: 'cinematic poster 20.jpg',
+        category: 'Cinematic Posters',
+        registered: '2026-06-09',
+      },
+      'CS-003': {
+        id: 'CS-003',
+        title: 'Cinematic Poster 19',
+        ref: 'cinematic_poster_19',
+        file: 'cinematic poster 19.jpg',
+        category: 'Cinematic Posters',
+        registered: '2026-06-09',
+      },
+      'CS-004': {
+        id: 'CS-004',
+        title: 'Cinematic Poster 18',
+        ref: 'cinematic_poster_18',
+        file: 'cinematic poster 18.jpg',
+        category: 'Cinematic Posters',
+        status: 'DRAFT — IN PROGRESS',
+        registered: '2026-06-09',
+
+        // ── CLIENT ──
+        client: 'Funmoji',
+
+        // ── OBJECTIVE / BRIEF ──
+        objective: 'Create a high-impact horror episode thumbnail that instantly communicates danger, supernatural control, and suspense while promoting Episode 6 of the series. The goal is to maximize curiosity and clicks by presenting the protagonists as trapped under the control of a terrifying paranormal force.',
+
+        // ── TARGET AUDIENCE ──
+        targetAudience: 'Telugu YouTube audience, horror-comedy viewers, supernatural thriller fans, Funmoji subscribers, and mobile-first viewers aged 15–40.',
+
+        // ── VISUAL HOOK ──
+        visualHook: 'A gigantic ghostly puppet master dominates the frame while controlling the main characters through visible strings. The oversized hand reaching toward the viewer creates immediate threat perception and establishes the central conflict within a single glance.',
+
+        // ── TYPOGRAPHY PSYCHOLOGY ──
+        typographyPsychology: 'The "13B" title uses distressed metallic textures, rust effects, cracks, and blood-stained details to signal horror and danger. The large Episode 6 typography creates clear content identification while maintaining visual consistency with the series branding.',
+
+        // ── COLOR PSYCHOLOGY ──
+        colorPsychology: 'The composition relies on dark teal, grey, black, and stormy blue tones to create fear and unease. Red accents in the eyes, blood details, and typography introduce danger signals and heighten emotional intensity. Lightning highlights create dramatic contrast and visual energy.',
+
+        // ── COMPOSITION LOGIC ──
+        compositionLogic: 'The ghost occupies the upper center as the dominant visual authority. The protagonists are positioned below on a rooftop, reinforcing vulnerability. The large reaching hand creates a strong foreground element while the city environment frames the narrative context. The composition clearly communicates the power imbalance between villain and heroes.',
+
+        // ── CHARACTER PLACEMENT ──
+        characterPlacement: 'The puppet master ghost is positioned centrally and scaled significantly larger than all other elements to establish dominance. The monkey-faced protagonist is placed near center as the primary victim. Supporting characters are positioned beside him to reinforce group danger and audience identification.',
+
+        // ── EYE FLOW (5 TRIGGERS) ──
+        eyeFlow: [
+          '1. Giant red eyes of the ghost.',
+          '2. Oversized reaching hand.',
+          '3. Puppet strings leading downward.',
+          '4. Main monkey-faced protagonist.',
+          '5. Episode 6 typography and title.',
+        ],
+
+        // ── EMOTIONAL TRIGGER ──
+        emotionalTrigger: 'Fear, helplessness, suspense, danger, survival instinct, and curiosity. Viewers immediately want to know how the characters escaped or whether they survived the supernatural attack.',
+
+        // ── MARKETING PURPOSE ──
+        marketingPurpose: 'Designed to increase click-through rate by presenting a strong unresolved conflict. The puppet-control concept creates a mystery that cannot be fully understood without watching the episode.',
+
+        // ── MOBILE OPTIMIZATION ──
+        mobileOptimization: 'Large character silhouettes, oversized hand, bright red eyes, and bold typography remain recognizable even on small mobile screens. The visual hierarchy stays readable at thumbnail size.',
+
+        // ── DESIGNER SUMMARY ──
+        designerSummary: 'This thumbnail uses horror storytelling, scale contrast, supernatural symbolism, and emotional tension to create a strong click-driving visual. The giant puppet-master ghost, visible control strings, dramatic lighting, and distressed typography combine to communicate danger and suspense instantly while maintaining strong series branding consistency.',
+
+        // ── PENDING — awaiting user input ──
+        tools: [
+          'Adobe Photoshop',
+          'AI Image Generation Tools',
+          'Camera Raw Filter',
+          'Typography Compositing Techniques',
+          'Digital Painting & Color Grading Workflow',
+        ],
+        process: [
+          '1. Selected the puppet-master horror concept as the central narrative.',
+          '2. Designed a giant supernatural antagonist with exaggerated scale for dominance.',
+          '3. Positioned the protagonists beneath the villain to create vulnerability.',
+          '4. Added visible puppet strings to communicate control instantly.',
+          '5. Integrated storm atmosphere, lightning, rain, and dark city environment for horror mood.',
+          '6. Applied cinematic color grading using teal-grey shadows and red danger accents.',
+          '7. Created distressed horror typography matching the series identity.',
+          '8. Optimized character visibility, contrast, and readability for mobile thumbnail viewing.',
+        ],
+        outcome: 'Successfully produced a high-impact horror thumbnail with strong visual storytelling, clear villain-versus-victim hierarchy, strong emotional tension, and mobile-friendly readability. The thumbnail effectively communicates suspense, supernatural control, and episode-specific curiosity.',
+        notes: 'This design relies heavily on scale contrast psychology. The oversized puppet-master ghost acts as the primary attention magnet, while the strings create immediate narrative understanding. The composition was intentionally designed so viewers understand the conflict within seconds, increasing click probability and audience curiosity.',
+
+        status: 'COMPLETE ✓',
+        finalised: '2026-06-09',
+      },
+      'CS-005': {
+        id: 'CS-005',
+        title: 'Cinematic Poster 17',
+        ref: 'cinematic_poster_17',
+        file: 'cinematic poster 17.jpg',
+        category: 'Cinematic Posters',
+        status: 'DRAFT — IN PROGRESS',
+        registered: '2026-06-09',
+
+        // ── CLIENT ──
+        client: 'Funmoji',
+
+        // ── OBJECTIVE / BRIEF ──
+        objective: 'Create a humorous, curiosity-driven thumbnail that instantly communicates a playful conflict involving a mysterious door while promoting a light-hearted comedy episode. The goal is to attract viewers through visual confusion, exaggerated character reactions, and a simple but intriguing scenario.',
+
+        // ── TARGET AUDIENCE ──
+        targetAudience: 'Telugu YouTube audience, comedy viewers, family entertainment audiences, Funmoji subscribers, and mobile-first viewers aged 10–40.',
+
+        // ── VISUAL HOOK ──
+        visualHook: 'A cheerful character is trapped between two doors while two other characters pull the doors in opposite directions. The unusual situation immediately creates curiosity because viewers want to know what is happening and why the characters are fighting over the door.',
+
+        // ── TYPOGRAPHY PSYCHOLOGY ──
+        typographyPsychology: 'The large yellow Telugu title uses smooth rounded letterforms and bright colors to create a fun, energetic, and family-friendly tone. The typography feels playful rather than dramatic, matching the comedic nature of the content.',
+
+        // ── COLOR PSYCHOLOGY ──
+        colorPsychology: 'The design is dominated by bright green backgrounds paired with yellow typography. Green creates freshness, simplicity, and visibility, while yellow attracts attention and communicates positivity, fun, and entertainment. The overall palette keeps the mood light and humorous.',
+
+        // ── COMPOSITION LOGIC ──
+        compositionLogic: 'The central character is positioned exactly between two doors, creating a natural focal point. Supporting characters are placed on both sides pulling the doors apart, generating visual tension and balance. The composition immediately communicates conflict while maintaining simplicity.',
+
+        // ── CHARACTER PLACEMENT ──
+        characterPlacement: 'The smiling central character acts as the primary focus and is framed by the doorway. The left character creates directional force from one side, while the monkey-faced character mirrors the action on the opposite side. This symmetrical arrangement strengthens readability and visual storytelling.',
+
+        // ── EYE FLOW (5 TRIGGERS) ──
+        eyeFlow: [
+          '1. Large yellow Telugu title.',
+          '2. Central smiling character.',
+          '3. Left character pulling the door.',
+          '4. Right monkey-faced character pulling the opposite door.',
+          '5. Door structure connecting all three characters.',
+        ],
+
+        // ── EMOTIONAL TRIGGER ──
+        emotionalTrigger: 'Curiosity, amusement, confusion, and anticipation. Viewers instantly wonder what situation led to the character being stuck between two doors and what will happen next.',
+
+        // ── MARKETING PURPOSE ──
+        marketingPurpose: 'Designed to maximize click-through rate through a simple but unusual visual situation. The thumbnail withholds context while clearly presenting a comedic conflict, encouraging viewers to click for the explanation.',
+
+        // ── MOBILE OPTIMIZATION ──
+        mobileOptimization: 'Large characters, simple background, strong color contrast, and minimal visual clutter ensure readability on small mobile screens. The concept remains understandable even at thumbnail size.',
+
+        // ── DESIGNER SUMMARY ──
+        designerSummary: 'This thumbnail relies on simplicity, symmetry, and visual curiosity. The unusual door-based conflict creates immediate intrigue, while the bright colors, expressive poses, and clean composition make the design highly effective for comedy content and mobile-first audiences.',
+
+        // ── PENDING — awaiting user input ──
+        tools: [
+          'Adobe Photoshop',
+          'AI Image Generation Tools',
+          'Camera Raw Filter',
+          'Character Compositing Workflow',
+          'Typography Design Techniques',
+        ],
+        process: [
+          '1. Developed a simple comedy concept centered around a door-based conflict.',
+          '2. Positioned the main character inside the doorway as the focal point.',
+          '3. Added opposing character actions to create visual tension.',
+          '4. Used symmetrical composition for instant readability.',
+          '5. Selected a bright green background to maintain simplicity and clarity.',
+          '6. Designed bold yellow typography to attract attention.',
+          '7. Balanced character spacing to avoid visual clutter.',
+          '8. Optimized the design for mobile thumbnail visibility.',
+        ],
+        outcome: 'Successfully created a clean, highly readable comedy thumbnail that communicates conflict, curiosity, and entertainment within seconds. The design encourages clicks by presenting an unusual situation without revealing the full story.',
+        notes: 'This design depends heavily on curiosity-gap psychology. The audience immediately understands that a conflict exists but does not know the reason behind it. The simple background and strong character silhouettes ensure maximum readability and fast visual processing on YouTube home feeds.',
+
+        status: 'COMPLETE ✓',
+        finalised: '2026-06-09',
+      },
+      'CS-006': {
+        id: 'CS-006',
+        title: 'Cinematic Poster 16',
+        ref: 'cinematic_poster_16',
+        file: 'cinematic poster 16.jpg',
+        category: 'Cinematic Posters',
+        status: 'DRAFT — IN PROGRESS',
+        registered: '2026-06-09',
+
+        // ── CLIENT ──
+        client: 'Funmoji',
+
+        // ── OBJECTIVE / BRIEF ──
+        objective: 'Create a high-impact comedy thumbnail centered around exam pressure and humorous over-studying behavior. The goal is to instantly communicate an exaggerated exam preparation scenario while creating curiosity, relatability, and entertainment value that encourages clicks from students and young audiences.',
+
+        // ── TARGET AUDIENCE ──
+        targetAudience: 'Students, teenagers, young adults, Funmoji viewers, comedy-content audience, educational humor viewers, and Telugu entertainment consumers.',
+
+        // ── VISUAL HOOK ──
+        visualHook: 'Multiple versions of the same character studying in absurd and exaggerated ways inside a room while giant characters peek over the walls observing the situation. Flying papers, books, and energetic poses immediately communicate exam chaos and over-preparation.',
+
+        // ── TYPOGRAPHY PSYCHOLOGY ──
+        typographyPsychology: 'Large bold white Telugu title combined with bright yellow "Exams" text creates instant readability. The typography occupies the center of the frame and clearly communicates the topic even at thumbnail size.',
+
+        // ── COLOR PSYCHOLOGY ──
+        colorPsychology: 'Bright yellow background generates energy, urgency, and attention. Blue interior walls provide contrast and improve character separation. White typography increases readability while yellow text reinforces the exam theme.',
+
+        // ── COMPOSITION LOGIC ──
+        compositionLogic: 'Top section contains the observing characters. Center contains the title. Lower section contains multiple study actions distributed across the room. The layout creates a top-to-bottom storytelling flow that keeps the viewer exploring the scene.',
+
+        // ── CHARACTER PLACEMENT ──
+        characterPlacement: 'Large observer characters positioned at the top edge. Four study versions of the protagonist distributed throughout the room performing different activities. This creates visual variety while maintaining a clear focal hierarchy.',
+
+        // ── EYE FLOW (5 TRIGGERS) ──
+        eyeFlow: [
+          '1. Large Telugu title.',
+          '2. Yellow "Exams" typography.',
+          '3. Giant observer character on left.',
+          '4. Giant observer character on right.',
+          '5. Multiple studying characters across the room.',
+        ],
+
+        // ── EMOTIONAL TRIGGER ──
+        emotionalTrigger: 'Relatability, humor, exam stress, curiosity, exaggeration, and entertainment.',
+
+        // ── MARKETING PURPOSE ──
+        marketingPurpose: 'Increase click-through rate by presenting a familiar exam situation in an exaggerated comedic format that students instantly recognize.',
+
+        // ── MOBILE OPTIMIZATION ──
+        mobileOptimization: 'Large typography, bright contrast, oversized characters, simple room structure, and clear silhouettes ensure readability on small screens.',
+
+        // ── DESIGNER SUMMARY ──
+        designerSummary: 'The design uses exaggeration psychology and relatability-driven comedy. Multiple versions of the same character studying in different ways create humor instantly. The giant observers add curiosity while the bright color palette ensures strong visibility in YouTube feeds.',
+
+        // ── PENDING — awaiting user input ──
+        tools: [
+          'Adobe Photoshop',
+          'AI Image Generation Tools',
+          'Camera Raw Filter',
+          'Character Compositing Workflow',
+          'Typography Design Techniques',
+        ],
+        process: [
+          '1. Developed an exam-comedy concept centered around exaggerated study behavior.',
+          '2. Created multiple versions of the same character performing different study actions.',
+          '3. Positioned giant observer characters above the room to create curiosity.',
+          '4. Designed a room environment filled with books, papers, and study materials.',
+          '5. Added flying paper elements to increase visual energy and movement.',
+          '6. Used bright yellow and blue color contrast for maximum visibility.',
+          '7. Designed large typography for instant topic recognition.',
+          '8. Optimized character scale, contrast, and readability for mobile thumbnail viewing.',
+        ],
+        outcome: 'Successfully created a highly engaging comedy thumbnail that instantly communicates exam stress, humor, and entertainment. The multiple-character storytelling approach increases viewer curiosity while maintaining strong readability.',
+        notes: 'This design relies heavily on relatability psychology. Students immediately recognize the exam theme while the exaggerated study behaviors create humor and curiosity. The bright color palette and clear visual hierarchy improve clickability and mobile performance.',
+
+        status: 'COMPLETE ✓',
+        finalised: '2026-06-16',
+      },
+
+      /* ── CS-007 — FINALIZED RECORD ── */
+      'CS-007': {
+        id: 'CS-007',
+        title: 'Cinematic Poster 15',
+        ref: 'cinematic_poster_15',
+        file: 'cinematic poster 15.jpg',
+        category: 'Cinematic Posters',
+        status: 'DRAFT — IN PROGRESS',
+        registered: '2026-06-16',
+
+        // ── CLIENT ──
+        client: 'WhatNot Telugu / Pranada Media',
+
+        // ── OBJECTIVE / BRIEF ──
+        objective: 'Create a high-impact ensemble character poster that immediately introduces the main cast, establishes character diversity, promotes Episode 7 of “The 9 to 5 Rebels” series, and increases viewer curiosity about the evolving story and relationships between the characters. The goal is to maximize recognition, series retention, and click-through rate by presenting the full cast in one cohesive, character-driven visual.',
+
+        // ── TARGET AUDIENCE ──
+        targetAudience: 'Telugu YouTube audience, young working professionals aged 18–40, office-comedy and workplace drama viewers, WhatNot Telugu subscribers, Pranada Media fans, and mobile-first viewers interested in character-driven web series.',
+
+        // ── VISUAL HOOK ──
+        visualHook: 'A bold horizontal ensemble lineup presents all main cast members in strong, characterful poses — each dressed and styled to reflect their individual personality. The group formation creates instant cast familiarity while diverse expressions and body language hint at the tension, comedy, and evolving dynamics at the heart of the series.',
+
+        // ── TYPOGRAPHY PSYCHOLOGY ──
+        typographyPsychology: 'The series title “The 9 to 5 Rebels” uses bold, energetic typography that communicates defiance, ambition, and workplace attitude. The word “Rebels” is visually emphasised to signal the anti-establishment tone of the show. The Episode 7 marker provides clear content navigation while maintaining brand consistency with earlier episodes in the series.',
+
+        // ── COLOR PSYCHOLOGY ──
+        colorPsychology: 'A warm, contemporary color palette blending office-neutral tones with vibrant character costume accents creates a visual energy that feels both professional and rebellious. Each character’s distinct costume color helps differentiate personalities at a glance. The overall palette communicates relatability, energy, and the fun-serious duality of the series tone.',
+
+        // ── COMPOSITION LOGIC ──
+        compositionLogic: 'The ensemble lineup spans the full horizontal width of the frame, creating a panoramic cast introduction. Lead characters occupy the primary central focal zone while supporting cast members flank outward in a natural hierarchy. The series branding anchors the composition at the top, episode information is placed for clear identification, and the background environment reinforces the workplace-rebellion narrative context.',
+
+        // ── CHARACTER PLACEMENT ──
+        characterPlacement: 'The principal lead is positioned at the visual center as the primary audience anchor. Supporting characters are arranged symmetrically on both sides, each given distinct spacing and pose variation to communicate individual personality. The layered group arrangement creates depth while ensuring every face is clearly visible. Character heights and angles are staggered to avoid a flat lineup feel and to suggest natural group dynamics.',
+
+        // ── EYE FLOW (5 TRIGGERS) ──
+        eyeFlow: [
+          '1. Series title typography — “The 9 to 5 Rebels” — establishes brand identity.',
+          '2. Central lead character’s face and dominant pose draw the eye inward.',
+          '3. Left ensemble group with distinct costumes and expressive poses.',
+          '4. Right ensemble group mirroring energy and reinforcing group scale.',
+          '5. Episode 7 branding and channel identity confirm content and series continuity.',
+        ],
+
+        // ── EMOTIONAL TRIGGER ──
+        emotionalTrigger: 'Curiosity, excitement, relatability, team energy, and anticipation. Viewers feel drawn to discover the relationships and conflicts between these distinct personalities. The ensemble format triggers the psychological desire to identify a favourite character and understand how each individual fits within the group dynamic.',
+
+        // ── MARKETING PURPOSE ──
+        marketingPurpose: 'Designed to build cast recognition, reinforce series identity, and drive Episode 7 viewership among both new and returning viewers. The ensemble format communicates a rich, character-driven narrative that rewards continued watching. The poster simultaneously functions as an episode thumbnail and a series brand asset for the WhatNot Telugu channel.',
+
+        // ── MOBILE OPTIMIZATION ──
+        mobileOptimization: 'Large character silhouettes, bold facial expressions, distinct costume color separation, and strong title typography remain clearly visible and identifiable at YouTube thumbnail size on mobile devices. The horizontal ensemble spread is calibrated to ensure all main cast faces are legible even when displayed at reduced screen resolutions on the YouTube mobile home feed.',
+
+        // ── DESIGNER SUMMARY ──
+        designerSummary: 'This ensemble character poster uses cast variety, strong group composition, and bold series typography to introduce the full cast of “The 9 to 5 Rebels” while promoting Episode 7 for WhatNot Telugu. The design prioritises cast familiarity, series brand consistency, and mobile thumbnail readability — making it an effective promotional asset for audience growth, series retention, and click-through performance across the YouTube platform.',
+
+        // ── TOOLS ──
+        tools: [
+          'Adobe Photoshop',
+          'AI Image Generation Tools',
+          'Camera Raw Filter',
+          'Ensemble Character Compositing Workflow',
+          'Typography Design & Series Brand Identity Techniques',
+        ],
+
+        // ── PROCESS ──
+        process: [
+          '1. Analysed the Episode 7 narrative to identify the optimal cast combination for ensemble poster representation.',
+          '2. Sourced and prepared individual character reference visuals with consistent lighting and perspective alignment.',
+          '3. Designed the horizontal ensemble composition layout, placing the central lead and arranging supporting cast symmetrically outward.',
+          '4. Built the background environment to reflect the workplace-rebellion series aesthetic and support the character lineup.',
+          '5. Applied cinematic color grading across all characters to achieve visual cohesion while preserving individual costume and personality identity.',
+          '6. Designed the “The 9 to 5 Rebels” series title typography with bold, defiant styling and integrated the Episode 7 marker within the brand system.',
+          '7. Added WhatNot Telugu channel branding, refined visual hierarchy, and balanced spacing across all cast members.',
+          '8. Optimised character contrast, face clarity, color separation, and overall composition readability for mobile YouTube thumbnail performance.',
+        ],
+
+        // ── OUTCOME ──
+        outcome: 'Successfully produced a dynamic ensemble cast thumbnail that introduces all main characters of “The 9 to 5 Rebels,” establishes a strong series identity for Episode 7, and generates clear viewer curiosity about team dynamics and interpersonal conflicts. The design effectively balances individual character identity with cohesive group energy while maintaining strong visual hierarchy and readability across all screen sizes and platforms.',
+
+        // ── DESIGNER NOTES ──
+        notes: 'This design relies on ensemble psychology — viewers are instinctively drawn to group compositions because they trigger curiosity about relationships, power hierarchies, and unresolved story dynamics within the group. The decision to feature all main cast members creates an implicit viewer promise of complex character interactions and multi-layered storytelling, encouraging continued series viewership. The horizontal spread maximises face visibility per unit of space while the bold series title ensures immediate brand recognition even for first-time viewers encountering the thumbnail without prior context.',
+
+        status: 'COMPLETE ✓',
+        finalised: '2026-06-16',
+      },
+
+      /* ── CS-008 — FINALIZED RECORD ── */
+      'CS-008': {
+        id: 'CS-008',
+        title: 'Cinematic Poster 14',
+        ref: 'cinematic_poster_14',
+        file: 'cinematic poster 14.jpg',
+        category: 'Cinematic Posters',
+        status: 'COMPLETE ✓',
+        registered: '2026-06-16',
+
+        // ── CLIENT ──
+        client: 'WhatNot Telugu / Pranada Media',
+
+        // ── OBJECTIVE / BRIEF ──
+        objective: 'Create a visually compelling cinematic poster for a WhatNot Telugu web series production by Pranada Media that communicates the central dramatic conflict, establishes the emotional stakes of the story, and drives strong click-through engagement. The poster must convey narrative tension and character emotion at a glance while maintaining series brand identity.',
+
+        // ── TARGET AUDIENCE ──
+        targetAudience: 'Telugu YouTube audience, drama and thriller-genre viewers, young adults aged 18–45, WhatNot Telugu channel subscribers, Pranada Media followers, and mobile-first viewers who consume short-form Telugu web content.',
+
+        // ── VISUAL HOOK ──
+        visualHook: 'A dramatically lit lead character dominates the composition against a richly layered cinematic background. The central figure’s expression and posture communicate the emotional weight of the story instantly — drawing the viewer into the narrative conflict before a single word is read. Strong contrast between the foreground subject and the atmospheric background creates immediate visual depth and intrigue.',
+
+        // ── TYPOGRAPHY PSYCHOLOGY ──
+        typographyPsychology: 'The series or episode title uses high-contrast, cinematic letterforms that communicate seriousness, drama, and storytelling weight. The typography is layered within the composition to complement rather than compete with the character visual. Episode or series identification elements are placed with deliberate hierarchy to inform without distracting from the primary emotional hook of the character portrayal.',
+
+        // ── COLOR PSYCHOLOGY ──
+        colorPsychology: 'The color palette employs deep, saturated tones — dramatic blues, rich ambers, or charged moody tones — to communicate the emotional intensity of the narrative. Shadow zones deepen the sense of conflict while selective warm highlights draw attention to the character’s face and emotional expression. The tonal contrast between light and dark reinforces the thematic tension at the heart of the story.',
+
+        // ── COMPOSITION LOGIC ──
+        compositionLogic: 'The poster uses a strong vertical composition with the lead character occupying the dominant upper zone of the frame. Supporting visual elements — environmental details, secondary characters, or narrative symbols — are distributed in the middle and lower register to build story context without competing for primary attention. The composition is engineered to guide the viewer’s eye from face to title to supporting detail in a controlled, deliberate reading sequence.',
+
+        // ── CHARACTER PLACEMENT ──
+        characterPlacement: 'The lead character is front and center as the undisputed visual authority of the composition. Facial expression and posture are chosen specifically to communicate the emotional arc of the narrative. Any secondary characters or figures are positioned to reinforce rather than divide viewer attention — supporting the lead’s story rather than competing with it.',
+
+        // ── EYE FLOW (5 TRIGGERS) ──
+        eyeFlow: [
+          '1. Lead character’s face and expression — the primary emotional entry point.',
+          '2. Dramatic lighting highlight across the character’s silhouette or key feature.',
+          '3. Title typography — confirms identity and creates brand recognition.',
+          '4. Background environment or atmospheric detail — builds narrative world context.',
+          '5. Channel or series branding element — anchors content source and drives subscription recall.',
+        ],
+
+        // ── EMOTIONAL TRIGGER ──
+        emotionalTrigger: 'Suspense, curiosity, dramatic empathy, and a strong desire to understand the story behind the character’s expression. The viewer immediately senses that something significant is at stake, triggering the psychological need for narrative resolution — which can only be satisfied by clicking and watching.',
+
+        // ── MARKETING PURPOSE ──
+        marketingPurpose: 'Designed to maximise click-through rate by leading with character emotion rather than plot exposition. The poster communicates dramatic stakes immediately, making it effective for both new viewers discovering the series and returning subscribers anticipating the next episode. It serves simultaneously as an episode thumbnail and a series promotional asset for the WhatNot Telugu YouTube platform.',
+
+        // ── MOBILE OPTIMIZATION ──
+        mobileOptimization: 'The dominant character close-up, high-contrast lighting, and bold title typography are all calibrated to remain impactful at small thumbnail dimensions on mobile YouTube feeds. The simplified background ensures the character and title do not get lost in visual noise at reduced resolutions. The strong silhouette and colour contrast guarantee recognisability even on the smallest screen sizes.',
+
+        // ── DESIGNER SUMMARY ──
+        designerSummary: 'This cinematic poster uses dramatic character portraiture, cinematic lighting, atmospheric colour grading, and purposeful typography to create a high-impact promotional visual for WhatNot Telugu and Pranada Media. Every design decision — from the character’s expression to the tonal palette to the type placement — is engineered to maximise emotional impact, viewer curiosity, and click-through performance across both desktop and mobile YouTube environments.',
+
+        // ── TOOLS ──
+        tools: [
+          'Adobe Photoshop',
+          'AI Image Generation Tools',
+          'Camera Raw Filter',
+          'Advanced Cinematic Compositing Workflow',
+          'Typography Design & Cinematic Branding Techniques',
+        ],
+
+        // ── PROCESS ──
+        process: [
+          '1. Analysed the episode narrative and identified the central dramatic moment best suited for a high-impact character-focused poster concept.',
+          '2. Curated and prepared the lead character visual — selecting the expression and posture that most powerfully communicates the emotional stakes of the story.',
+          '3. Built the background environment using atmospheric compositing — layering depth, texture, and contextual storytelling elements behind the character.',
+          '4. Applied advanced cinematic lighting — sculpting dramatic highlights and shadows across the character to reinforce the emotional tone of the narrative.',
+          '5. Executed full cinematic colour grading using Camera Raw — establishing the tonal mood, contrast, and colour temperature that define the visual identity of the poster.',
+          '6. Designed and integrated the title and episode typography — selecting letterforms, weight, and placement that complement the character composition without competing for visual priority.',
+          '7. Added channel branding, series identity elements, and final visual hierarchy refinements to ensure the poster reads correctly as both an episode thumbnail and a series promotional asset.',
+          '8. Conducted mobile thumbnail optimisation — testing contrast, character legibility, and typography readability at reduced sizes to ensure maximum click performance on the YouTube mobile feed.',
+        ],
+
+        // ── OUTCOME ──
+        outcome: 'Successfully delivered a cinematic, character-driven promotional poster for WhatNot Telugu and Pranada Media that communicates dramatic narrative tension, establishes strong series identity, and is optimised for high click-through performance across YouTube’s desktop and mobile platforms. The design effectively converts viewer attention into content curiosity within a single glance.',
+
+        // ── DESIGNER NOTES ──
+        notes: 'Character-led cinematic posters work because they create an instant parasocial connection — the viewer registers the character’s emotion as if it were a real person they know, triggering empathy and curiosity simultaneously. The deliberate use of cinematic lighting and a controlled colour palette elevates the visual perception of production quality, signalling to the audience that the content is worth their time. For YouTube thumbnails specifically, the face-forward approach consistently outperforms scene-based compositions because faces process faster than environments in peripheral vision — making them inherently more clickable in high-density feed environments.',
+
+        status: 'COMPLETE ✓',
+        finalised: '2026-06-16',
+      },
+
+      /* ── CS-009 — FINALIZED RECORD ── */
+      'CS-009': {
+        id: 'CS-009',
+        title: 'Cinematic Poster 13',
+        ref: 'cinematic_poster_13',
+        file: 'cinematic poster 13.jpg',
+        category: 'Cinematic Posters',
+        status: 'COMPLETE ✓',
+        registered: '2026-06-16',
+
+        // ── CLIENT ──
+        client: 'Funmoji',
+
+        // ── OBJECTIVE / BRIEF ──
+        objective: 'Create a high-energy comedy thumbnail that uses food as a central visual metaphor — specifically the beloved street food pani puri / golgappa — to generate instant humour, surprise, and curiosity. The goal is to make the Funmoji channel’s ensemble characters literally erupt from pani puri shells alongside the iconic giant monkey mascot, creating a thumbnail that stops the scroll and drives clicks through visual absurdity, cultural familiarity, and comedic chaos.',
+
+        // ── TARGET AUDIENCE ──
+        targetAudience: 'Telugu YouTube audience, comedy and food entertainment viewers, Funmoji subscribers, young adults and families aged 10–38, street food culture enthusiasts, and mobile-first viewers who respond strongly to humour, surprise, and culturally familiar visual references.',
+
+        // ── VISUAL HOOK ──
+        visualHook: 'A colossal monkey mascot towers over the right side of the frame while multiple cast characters burst out of giant oversized pani puri shells arranged across the composition. The absurd contrast of beloved street food serving as character containers creates immediate comedic dissonance that stops scrolling viewers in their tracks. Floating pani puri elements and splashing water enhance the sense of motion and chaos, turning the entire frame into a food-themed carnival of energy.',
+
+        // ── TYPOGRAPHY PSYCHOLOGY ──
+        typographyPsychology: 'The large bold Telugu title text at the top of the composition uses thick, playful letterforms with strong legibility optimised for mobile thumbnail reading distance. The typography communicates fun, energy, and cultural identity simultaneously — matching the food-comedy aesthetic of the visual. The bold weight and warm colour of the title text creates a visual counterbalance to the detailed character chaos below, anchoring the composition and confirming content identity before any other element is read.',
+
+        // ── COLOR PSYCHOLOGY ──
+        colorPsychology: 'The warm orange, yellow, and brown food-inspired palette does double duty: it evokes the visual identity of actual pani puri — triggering cultural memory and appetite in the viewer — while simultaneously communicating energy, fun, and positivity. Orange is a high-visibility, enthusiasm-triggering colour in YouTube feed environments. Yellow reinforces cheerfulness and recall. The warm tonal unity across the composition creates visual cohesion despite the chaotic multi-character arrangement, making the poster feel lively rather than cluttered.',
+
+        // ── COMPOSITION LOGIC ──
+        compositionLogic: 'The giant monkey mascot anchors the right vertical edge as the dominant weight of the composition, creating a strong rightward pull that the bold left-positioned title balances. The pani puri shells are distributed horizontally across the lower and mid registers, creating a chaotic-but-readable ensemble spread. Floating pani puri elements in the background and foreground add layered depth and kinetic energy. The overall structure uses controlled chaos — the composition appears spontaneous but is carefully calibrated to ensure every character face is visible and the title remains unobstructed at thumbnail size.',
+
+        // ── CHARACTER PLACEMENT ──
+        characterPlacement: 'The giant monkey mascot is placed on the right side at full height, commanding the frame through sheer scale advantage. Individual cast characters are positioned inside or erupting from separate pani puri shells distributed across the lower half of the composition — each given enough space for face visibility and pose expression. The distribution ensures no single character dominates the ensemble zone, creating a democratic cast introduction while the mascot retains sole authority as the visual centrepiece. Overlapping and scale variation between characters creates natural depth.',
+
+        // ── EYE FLOW (5 TRIGGERS) ──
+        eyeFlow: [
+          '1. Giant monkey mascot on the right — first contact through sheer scale and familiar brand identity.',
+          '2. Bold Telugu title text at the top — confirms content identity and series branding.',
+          '3. Characters bursting from pani puri shells — comedic absurdity draws the eye across the ensemble.',
+          '4. Floating pani puri elements and motion splashes — create depth perception and visual movement.',
+          '5. Individual character expressions and poses — reward closer inspection and build viewer-character connection.',
+        ],
+
+        // ── EMOTIONAL TRIGGER ──
+        emotionalTrigger: 'Amusement, surprise, delight, food nostalgia, and uncontrollable curiosity. The absurd logic of characters living inside pani puri shells creates an instant comedic gap in the viewer’s mind — they must click to understand how this bizarre scenario makes sense within the episode. The cultural recognition of pani puri as a beloved Telugu street food adds a layer of warm familiarity that makes the surreal imagery feel approachable and inviting rather than alienating.',
+
+        // ── MARKETING PURPOSE ──
+        marketingPurpose: 'Designed to maximize scroll-stop rate and click-through conversion by combining three high-performance YouTube thumbnail strategies simultaneously: scale contrast (giant mascot vs. small characters), cultural familiarity (pani puri as a universally recognized Telugu street food), and visual absurdism (characters inside food). The food metaphor also functions as a content tease — viewers immediately want to know the episode story context that justifies this bizarre visual scenario, making the thumbnail highly effective at driving clicks from both new and returning Funmoji subscribers.',
+
+        // ── MOBILE OPTIMIZATION ──
+        mobileOptimization: 'The oversized monkey mascot and large bold Telugu title ensure the two most critical recognition elements remain visible and impactful even at the smallest mobile thumbnail dimensions. The warm high-contrast orange and yellow palette provides strong feed visibility against YouTube’s neutral white interface. The pani puri shell containers give each character a clear visual boundary that maintains face legibility even at reduced resolution. The overall composition avoids fine detail dependency — the core comedic concept reads clearly without requiring zoom or expansion.',
+
+        // ── DESIGNER SUMMARY ──
+        designerSummary: 'This comedy food thumbnail uses cultural food metaphor, absurdist character staging, scale contrast psychology, and warm appetite-stimulating colour theory to create a high-CTR promotional visual for Funmoji. The pani puri concept is both a visual storytelling device and a cultural hook — making the design memorable, shareable, and deeply rooted in the audience’s everyday food experiences. The giant monkey mascot’s commanding presence combined with the chaotic ensemble of characters erupting from food containers delivers the channel’s signature comedy energy in a single powerful frame.',
+
+        // ── TOOLS ──
+        tools: [
+          'Adobe Photoshop',
+          'AI Image Generation Tools',
+          'Camera Raw Filter',
+          'Character Compositing Workflow',
+          'Typography Design Techniques',
+        ],
+
+        // ── PROCESS ──
+        process: [
+          '1. Developed the pani puri food metaphor concept — selecting street food as the episode’s visual theme to maximise cultural resonance and comedic absurdity for the Telugu audience.',
+          '2. Designed and positioned the giant monkey mascot on the right side of the frame, establishing the dominant scale anchor and primary brand identity element.',
+          '3. Created and composited individual pani puri shell containers across the lower and mid composition, sizing them to house each cast character with clear face visibility.',
+          '4. Placed ensemble characters inside and erupting from the pani puri shells, varying poses, angles, and expression intensity to maximize comedic energy and visual variety.',
+          '5. Added floating pani puri elements, water splash details, and background food particles to create motion, depth, and a sense of kinetic chaos throughout the composition.',
+          '6. Applied warm orange, yellow, and brown food-inspired colour grading using Camera Raw — unifying the composition tonally while reinforcing the cultural food theme and boosting feed visibility.',
+          '7. Designed the bold Telugu title typography at the top of the composition — selecting thick, playful letterforms that anchor the visual hierarchy and confirm content identity at thumbnail size.',
+          '8. Conducted final mobile optimisation review — checking mascot scale, character face legibility, title readability, and colour contrast at reduced thumbnail dimensions to ensure maximum click performance on the YouTube mobile feed.',
+        ],
+
+        // ── OUTCOME ──
+        outcome: 'Successfully created a high-energy, culturally resonant comedy thumbnail for Funmoji that leverages pani puri as both a visual storytelling device and a cultural familiarity trigger. The design effectively combines scale contrast, food nostalgia, character absurdism, and bold typography to produce a scroll-stopping, click-driving visual that delivers the channel’s comedy identity instantly while maintaining strong mobile readability and brand consistency.',
+
+        // ── DESIGNER NOTES ──
+        notes: 'Food-themed comedy thumbnails perform exceptionally well with Telugu YouTube audiences because food is a deeply embedded cultural identity marker — pani puri specifically carries strong emotional associations of shared community, street culture, and joyful excess. Using it as a character container subverts the food’s familiar function in a way that triggers an instant double-take from scrolling viewers. The absurdist logic — “why are there people inside the pani puri?” — creates a curiosity gap that can only be resolved by watching the video. The giant monkey mascot acts as the brand anchor that connects the surreal food imagery back to the known Funmoji universe, giving viewers a familiar entry point into an otherwise completely unexpected visual scenario.',
+
+        status: 'COMPLETE ✓',
+        finalised: '2026-06-16',
+      },
+    },
+
+    // Flat text summary for chatbot responses
+    caseStudies: `Lokesh K — Registered Project Case Studies\n\nTotal Case Studies: 9\n\n• Case Study 1 (CS-001) — Cinematic Poster 21 [Registered]\n• Case Study 2 (CS-002) — Cinematic Poster 20 [Registered]\n• Case Study 3 (CS-003) — Cinematic Poster 19 [Registered]\n• Case Study 4 (CS-004) — Cinematic Poster 18 ✓ (Client: Funmoji | Finalised: 2026-06-09)\n• Case Study 5 (CS-005) — Cinematic Poster 17 ✓ (Client: Funmoji | Finalised: 2026-06-09)\n• Case Study 6 (CS-006) — Cinematic Poster 16 ✓ (Client: Funmoji | Finalised: 2026-06-16)\n• Case Study 7 (CS-007) — Cinematic Poster 15 ✓ (Client: WhatNot Telugu / Pranada Media | Finalised: 2026-06-16)\n• Case Study 8 (CS-008) — Cinematic Poster 14 ✓ (Client: WhatNot Telugu / Pranada Media | Finalised: 2026-06-16)\n• Case Study 9 (CS-009) — Cinematic Poster 13 ✓ (Client: Funmoji | Finalised: 2026-06-16)\n\nAll are part of the Cinematic Posters category (21 works total). You can view them in the Work section of this portfolio.`,
   };
 
   /* ────────────────────────────────────────────
@@ -73,6 +612,11 @@
     // Services / offer
     if (/service|offer|provide|what do (you|he|lokesh) (do|make|create)|hire|work|commission/i.test(q)) {
       return KB.services;
+    }
+
+    // Case studies
+    if (/case stud(y|ies)|cs-00[123]|registered project|project index/i.test(q)) {
+      return KB.caseStudies;
     }
 
     // Portfolio / work
@@ -220,18 +764,18 @@
      CHAT LOGIC
   ──────────────────────────────────────────── */
   function initChat(bubble, panel) {
-    const messagesEl   = panel.querySelector('#ai-messages');
-    const inputEl      = panel.querySelector('#ai-chat-input');
-    const sendBtn      = panel.querySelector('#ai-send-btn');
-    const closeBtn     = panel.querySelector('#ai-panel-close');
-    const chips        = panel.querySelectorAll('.ai-chip');
-    const statusDot    = panel.querySelector('#ai-status-dot');
-    const statusText   = panel.querySelector('#ai-status-text');
+    const messagesEl = panel.querySelector('#ai-messages');
+    const inputEl = panel.querySelector('#ai-chat-input');
+    const sendBtn = panel.querySelector('#ai-send-btn');
+    const closeBtn = panel.querySelector('#ai-panel-close');
+    const chips = panel.querySelectorAll('.ai-chip');
+    const statusDot = panel.querySelector('#ai-status-dot');
+    const statusText = panel.querySelector('#ai-status-text');
     const suggestionsEl = panel.querySelector('#ai-suggestions');
 
-    let isOpen     = false;
+    let isOpen = false;
     let hasGreeted = false;
-    let isTyping   = false;
+    let isTyping = false;
 
     /* ── Helpers ── */
     function scrollToBottom() {
